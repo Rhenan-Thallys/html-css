@@ -1,0 +1,112 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header{
+    background-image: linear-gradient(black);
+    color:white;
+    text-align: center;
+    padding-bottom: 30px;
+}
+header h1{
+    text-align: center;
+    color: white;
+    padding: 30px;
+    padding-bottom: 5px;
+}
+header p{
+    color: gray;
+}
+header a{
+    text-decoration: none;
+    color: white;
+}
+section{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#sec1{
+    padding-top: 70px;
+    padding-bottom: 70px;
+    padding-left: 10px;
+    text-align: justify;
+}
+#sec1 p{
+    line-height: 40px;
+}
+#sec2{
+    box-shadow: inset black 0px 1px 3px 0px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 10px;
+    text-align: justify;
+    background-image: url(imagens/pexels-jplenio-1435075.jpg);
+    background-attachment: fixed;
+}
+#sec2 p{
+    line-height: 40px;
+    background-color: rgb(51, 51, 51);
+    width: 300px;
+    padding-left: 10px;
+    background-size: cover;
+    color: white;
+    background: transparent;
+     background-color: rgba(0, 0, 0, 0.253);
+     text-shadow: 1px 1px 0px black;
+}
+#sec3{
+    padding-top: 70px;
+    padding-bottom: 50px;
+    padding-left: 10px;
+    text-align: justify;
+}
+#sec3 p{
+    line-height: 40px;
+}
+#sec4{
+    box-shadow: inset black 0px 1px 3px 0px;
+    padding-top: 70px;
+    padding-bottom: 50px;
+    padding-left: 10px;
+    text-align: justify;
+    background-image: url(imagens/pexels-pixabay-326055.jpg);
+    background-attachment: fixed;
+}
+#sec4 p{
+    line-height: 40px;
+     box-shadow: inset 2px 2px 13px 0px rgba(0, 0, 0, 0.473);
+    width: 300px;
+    padding-left: 10px;
+    background-size: cover;
+    color: white;
+    background-color: rgb(51, 51, 51);
+    background: transparent;
+     background-color: rgba(0, 0, 0, 0.253);
+     text-shadow: 1px 1px 0px black;
+}
+#sec5{
+    padding-top: 70px;
+    padding-bottom: 50px;
+    padding-left: 10px;
+    text-align: justify;
+}
+#sec5 p{
+    line-height: 40px;
+}
+#sec6{
+    padding-top: 70px;
+    padding-bottom: 50px;
+    padding-left: 10px;
+    text-align: justify;
+}
+.imagemsolta{
+    background-image: url(imagens/pexels-pixabay-531321.jpg);
+    background-attachment: fixed;
+}
+#sec6 p{
+    line-height: 40px;
+}
