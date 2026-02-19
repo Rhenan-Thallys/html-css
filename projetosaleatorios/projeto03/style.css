@@ -43,6 +43,7 @@ section{
     text-align: justify;
     background-image: url(imagens/pexels-jplenio-1435075.jpg);
     background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 #sec2 p{
     line-height: 40px;
@@ -72,6 +73,7 @@ section{
     text-align: justify;
     background-image: url(imagens/pexels-pixabay-326055.jpg);
     background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 #sec4 p{
     line-height: 40px;
@@ -103,6 +105,7 @@ section{
 .imagemsolta{
     background-image: url(imagens/pexels-pixabay-531321.jpg);
     background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 #sec6 p{
     line-height: 40px;
