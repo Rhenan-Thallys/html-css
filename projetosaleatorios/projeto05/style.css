@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-image: url(imagens/blue-background-with-silk-texture-1514.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div.all{
+    background-color: gray;
+    margin: 0 auto;
+    height: 100vh;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 501px;
+    border-radius: 5px;
+    border: 2px solid white;
+    background: transparent;
+}
+.perfil{
+    padding-top: 60px;
+    padding-bottom: 30px;
+}
+.perfil img{
+    border-radius: 50%;
+    height: 125px;
+    width: 125px;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0px 0px 0px 6px;
+    background-color: white;
+}
+h1{
+    text-align: center;
+    padding-bottom: 10px;
+}
+h3{
+    text-align: center;
+    padding-bottom: 20px;
+}
+button{
+    width: 300px;
+    height: 50px;
+    background-color: white;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    border-radius: 15px;
+}
+a{
+    text-decoration: none;
+    color: black;
+    padding-top: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+button a:hover{
+    background-color: aliceblue;
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 3px 2px lightsteelblue;
+}
