@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: black;
+            color: white;
+        }
+        h1{
+            text-align: center;
+        }
+        form{
+            text-align: center;
+        }
+        .formulario{
+            margin: 0 auto;
+            background-color: darkblue;
+            width: 500px;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            border-radius: 20px;
+            border: 1px solid white;
+        }
+        label{
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        input{
+            border-radius: 15px;
+            height: 30px;
+            border: 2px solid gray;
+            box-shadow: 0px 0px 6px 0px pink;
+        }
+        #enviar{
+            width: 100px;
+        }
+        #limpar{
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulário de Agendamento</h1>
+    <div class="formulario">
+        <form action="agenda.php" method="get" autocomplete="on">
+            <p>
+                <label for="inome">Nome Completo:</label><br>
+                <input type="text" name="nome" id="inome" maxlength="30" required autocomplete="username">
+            </p>
+            <p>
+                <label for="isen">Senha: </label><br>
+                <input type="password" name="senha" id="isen" maxlength="10" required autocomplete="current-password">
+            </p>
+            <p>
+                <label for="imedia">Média de Satisfação esperada: </label><br>
+                <input type="number" name="media" id="imedia" max="10" step="0.5" required>
+            </p>
+            <p>
+                <label for="idia">Dia do atendimento: </label><br>
+                <input type="date" name="dia" id="idia" required>
+            </p>
+            <p>
+                <label for="imes">Mes do atendimento: </label><br>
+                <input type="month" name="mes" id="imes" required>
+            </p>
+            <p>
+                <label for="ihora">Horário do atendimento:</label><br>
+                <input type="time" name="hora" id="ihora" required>
+            </p>
+            <p>
+                <input id="enviar" type="submit" value="Enviar">
+                <input id="limpar" type="reset" value="Limpar">
+            </p>
+        </form>
+    </div>
+</body>
+</html>

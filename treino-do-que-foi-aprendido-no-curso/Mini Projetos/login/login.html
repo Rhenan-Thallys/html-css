@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Simples</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 10px;
+        }
+        h1{
+            text-align: center;
+        }
+        div#login{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 0 auto;
+            color: black;
+            text-align: center;
+            display: block;
+            justify-content: center;
+            align-content: center;
+            background-color: white;
+            border-radius: 30px;
+            border: 2px red solid;
+            width: 600px;
+            height: 710px;
+        }
+        #iuser{
+            font-size: 16px;
+            color: black;
+            border: none;
+            width: 300px;
+            height: 50px;
+            text-align: center;
+            background: transparent;
+            border-bottom: 2px solid black;
+        }
+        #iuser:focus{
+            outline: none;
+            color: black;
+        }
+        #iuser::placeholder{
+            color: gray;
+        }
+        #isen{
+            font-size: 16px;
+            color: black;
+            border: none;
+            width: 300px;
+            height: 50px;
+            text-align: center;
+            background: transparent;
+            border-bottom: 2px solid black;
+        }
+        #isen:focus{
+            outline: none;
+            color: black;
+        }
+        #isen::placeholder{
+            color: gray;
+        }
+        #flogi{
+            margin-top: 10px;
+            background-color: red;
+            color: white;
+            width: 360px;
+            height: 40px;
+            border-radius: 10px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+        }
+        #ah{
+            color: white;
+        }
+        #ah a:hover{
+            padding: 100px;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="login">
+        <h1>Login</h1>
+        <form action="login.php" method="get" autocomplete="on">
+            <p>
+                <label for="iuser">Usuário: </label>
+                <input type="text" name="usuario" id="iuser" required maxlength="30" placeholder="nome de usuáro">
+            </p>
+            <p>
+                <label for="isen">Senha: </label>
+                <input type="password" name="senha" id="isen" required maxlength="15" placeholder="Digite sua senha">
+            </p>
+            <p>
+                <button type="submit" id="flogi"><a href="login.php" id="ah">Fazer Login</a></button>
+            </p>
+            <p>
+                <label for="">ainda não possui uma conta? <a href="#">Fazer Login</a></label>
+            </p>
+        </form>
+    </div>
+</body>
+</html>
