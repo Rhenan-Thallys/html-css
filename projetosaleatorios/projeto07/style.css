@@ -1,0 +1,348 @@
+@charset "UTF-8";
+
+@import url(https://fonts.googleapis.com/css2?family=Pacifico&display=swap);
+:root{
+    --fonte1: "Pacifico", cursive;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: black;
+    color: white;
+    position: absolute;
+}
+nav{
+    display: flex;
+    padding: 15px 20px;
+    justify-content: space-between;
+    position: fixed;
+    max-width: 100%;
+    top: 0;
+    transition: 0.3s;
+    background-color: black;
+    width: 96vw;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+}
+nav a:hover{
+    color: green;
+}
+header{
+    padding-top: 100px;
+    padding-left: 100px;
+}
+#topo{
+    background-image: url(https://images.unsplash.com/photo-1662452883375-9226ea22c765?q=80&w=877&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    height: 700px;
+}
+#enjoy{
+    margin-top: -30px;
+    font-family: var(--fonte1);
+    font-size: 70px;
+}
+#watchvideo{
+    border: 2px solid red;
+    background: transparent;
+    width: 110px;
+}
+.botoes{
+    display: flex;
+    gap: 20px;
+}
+
+.btn1{
+    background-color: orangered;
+    padding: 3px;
+    width: 100px;
+    height: 35px;
+    text-align: center;
+    margin-top: -2px;
+    border: transparent;
+    color: white;
+    font-weight: bold;
+}
+
+.btn2{
+    background-color: transparent;
+    padding: 3px;
+    width: 100px;
+    height: 35px;
+    text-align: center;
+    margin-top: -2px;
+    border: 2px solid orangered;
+    color: white;
+    font-weight: bold;
+}
+.btn1:hover{
+    background-color: transparent;
+    border: 2px solid orangered;
+}
+.btn2:hover{
+    background-color: orangered;
+}
+main{
+    padding-left: 100px;
+    background-color: #2b1b17;
+    height: 100%;
+}
+.colortext{
+    color: orangered;
+}
+.best{
+    color: white;
+}
+.textmain{
+    text-align: center;
+    margin-top: -20px;
+}
+#services{
+    display: flex;
+    gap: 100px;
+    text-align: center;
+    height: 350px;
+    flex-wrap: wrap;
+}
+#s1{
+    box-shadow: 0px 0px 4px 0px black;
+}
+#s1 img{
+    width: 230px;
+    height: 230px;
+}
+#s2{
+    box-shadow: 0px 0px 4px 0px black;
+}
+#s2 img{
+    width: 200px;
+    height: 200px;
+}
+#s3{
+    box-shadow: 0px 0px 4px 0px black;
+}
+#s3 img{
+    width: 200px;
+    height: 200px;
+}
+#s1:hover{
+    border: 1px solid white;
+    height: 350px;
+}
+#s2:hover{
+    border: 1px solid white;
+    height: 350px;
+}
+#s3:hover{
+    border: 1px solid white;
+    height: 350px;
+}
+#exp1{
+    text-align: left;
+    background-color: white;
+    color: gray;
+}
+#exp2{
+    text-align: left;
+    background-color: white;
+    color: gray;
+}
+#exp3{
+    text-align: left;
+    background-color: white;
+    color: gray;
+}
+#exp4{
+    text-align: left;
+    background-color: white;
+    color: gray;
+}
+#exp1 button{
+    background-color: orangered;
+    padding: 5px;
+    width: 100px;
+    text-align: center;
+    margin-top: -5px;
+    font-weight: bold;
+    border: transparent;
+    color: white;
+}
+#exp2 button{
+    background-color: orangered;
+    padding: 5px;
+    width: 100px;
+    text-align: center;
+    margin-top: -5px;
+    font-weight: bold;
+    border: transparent;
+    color: white;
+}
+#exp3 button{
+    background-color: orangered;
+    padding: 5px;
+    width: 100px;
+    text-align: center;
+    margin-top: -5px;
+    font-weight: bold;
+    border: transparent;
+    color: white;
+}
+#exp4 button{
+    background-color: orangered;
+    padding: 5px;
+    width: 100px;
+    text-align: center;
+    margin-top: -5px;
+    font-weight: bold;
+    border: transparent;
+    color: white;
+}
+#exp1 img{
+    width: 305px;
+    height: 170px;
+}
+#exp2 img{
+    width: 305px;
+    height: 170px;
+}
+#exp3 img{
+    width: 305px;
+    height: 170px;
+}
+#exp4 img{
+    width: 305px;
+    height: 170px;
+}
+#seta{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    padding: 10px 12px;
+    background-color: orangered;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+#about{
+    margin-top: 150px;
+    font-family: var(--fonte1);
+    padding-left: 140px;
+}
+#lorem{
+    text-align: right;
+    margin-top: -100px;
+    margin-left: 490px;
+}
+#sobre{
+
+}
+#explorar{
+    margin-left: -100px;
+    padding: 40px;
+    margin-top: 800px;
+    display: flex;
+    gap: 70px;
+    text-align: center;
+    height: 275px;
+    align-content: center;
+    padding-bottom: 600px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#explorar button{
+    text-align: center;
+    justify-content: left;
+    display: block;
+    margin-left: 10px;
+}
+#exp1{
+    border: 2px solid orangered;
+}
+#exp2{
+    border: 2px solid orangered;
+}
+#exp3{
+    border: 2px solid orangered;
+}
+#exp4{
+    border: 2px solid orangered;
+}
+#download{
+    background-color: rgb(88, 83, 83);
+    height: 800px;
+    margin-left: -100px;
+    padding-top: 200px;
+    padding-left: 100px;
+}
+#loe{
+    font-family: var(--fonte1);
+    font-size: 70px;
+    margin-top: -30px;
+}
+#lea{
+    margin-top: -30px;
+    width: 700px;
+    text-align: left;
+}
+#download button{
+    background-color: orangered;
+    padding: 3px;
+    width: 100px;
+    height: 35px;
+    text-align: center;
+    margin-top: -2px;
+    border: transparent;
+    color: white;
+    font-weight: bold;
+}
+.links{
+    margin-top: 90px;
+    display: flex;
+    justify-content: center;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    background-color: #261a17;
+}
+footer img{
+    width: 60px;
+    height: 50px;
+}
+footer a{
+    margin: 10px;
+    text-decoration: none;
+    color: white;
+}
+footer a:hover{
+    color: green;
+    text-decoration: underline white;
+}
+footer p{
+    margin-top: -5px;
+}
+#explore{
+    justify-content: right;
+    background-color: orangered;
+    padding: 5px;
+    width: 80px;
+    text-align: center;
+    margin-top: -5px;
+    font-weight: bold;
+}
+#centronav{
+    justify-content: center;
+    display: flex;
+    gap: 20px;
+}
+#food{
+    text-decoration: none;
+    color: white;
+}
