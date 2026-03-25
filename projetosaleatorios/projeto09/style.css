@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#navegacao{
+    background-color: rgb(3, 3, 88);
+    height: 105px;
+}
+#ff img{
+    width: 333px;
+    padding-left: 45px;
+    padding-top: 20px;
+}
+nav{
+    display: flex;
+    gap: 50px;
+    margin-top: -40px;
+    width: 100%;
+    justify-content: right;
+    margin-left: -60px;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+nav a:hover{
+    text-decoration: underline blueviolet;
+}
+
+#banner{
+    background-image: url(imagens/616gamesbanner.webp);
+    height: 620px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+#about{
+    height: 525px;
+    background-color: black;
+}
+#about h1{
+    text-align: center;
+    color: white;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+#about p{
+    color: gray;
+    text-align: center;
+    font-size: 1.3em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 28px;
+}
+#ssor{
+    display: flex;
+    justify-content: center;
+    margin-left: 140px;
+}
+iframe{
+    width: 940px;
+}
+#within{
+    background-color: darkblue;
+    height: 300px;
+    text-align: center;
+    font-size: 1.4em;
+}
+#within h1{
+    color: rgb(255, 120, 253);
+    padding-top: 40px;
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+#within p{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 35px;
+}

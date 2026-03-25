@@ -42,8 +42,9 @@ section{
     padding-left: 10px;
     text-align: justify;
     background-image: url(imagens/pexels-jplenio-1435075.jpg);
-    background-attachment: fixed;
+    
     background-repeat: no-repeat;
+    background-size: cover;
 }
 #sec2 p{
     line-height: 40px;
@@ -72,8 +73,9 @@ section{
     padding-left: 10px;
     text-align: justify;
     background-image: url(imagens/pexels-pixabay-326055.jpg);
-    background-attachment: fixed;
+    
     background-repeat: no-repeat;
+    background-size: cover;
 }
 #sec4 p{
     line-height: 40px;
@@ -104,8 +106,9 @@ section{
 }
 .imagemsolta{
     background-image: url(imagens/pexels-pixabay-531321.jpg);
-    background-attachment: fixed;
+    
     background-repeat: no-repeat;
+    background-size: cover;
 }
 #sec6 p{
     line-height: 40px;
