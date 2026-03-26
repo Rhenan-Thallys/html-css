@@ -1,0 +1,160 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    overflow-x: hidden;
+}
+#cereja{
+    background-color: rgb(251, 180, 50);
+    height: 1990px;
+}
+
+#cereja img{
+    display: flex;
+    margin: 0 auto;
+    padding-top: 20px;
+    width: 100px;
+    height: 60px;
+}
+nav{
+    display: flex;
+    padding: 10px 20px;
+    gap: 25px;
+    justify-content: center;
+}
+nav a{
+    color: rgb(106, 70, 8);
+    display: inline;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+nav a:hover{
+    color:  rgb(155, 118, 54);
+}
+
+header{
+    padding-top: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header h1{
+    color: white;
+    text-align: center;
+    font-size: 3.7em;
+}
+
+header p{
+    text-align: center;
+    color: rgb(106, 70, 8);
+    padding-top: 20px;
+}
+
+#si img{
+    width: 100%;
+    height: 100%;
+    margin-top: -260px;
+}
+
+#i1{
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+}
+
+#i1 img{
+    width: 200px;
+    height: 200px;
+}
+
+#t1{
+    margin-left: -600px;
+}
+
+#t2{
+    margin-top: -130px;
+    margin-left: 630px;
+}
+
+#elf img{
+    width: 200px;
+    height: 300px;
+    margin-top: -60px;
+}
+
+#brilho1{
+    margin-top: -80px;
+    margin-left: -250px;
+}
+
+#brilho2{
+   margin-top: -80px;
+   margin-right: -240px;
+}
+
+#comp{
+    width: 150px;
+    height: 35px;
+    background-color: rgb(119, 144, 18);
+    display: flex;
+    margin: 0 auto;
+    border: transparent;
+    margin-top: 40px;
+    color: white;
+    font-weight: bold;
+}
+
+#contato{
+    background-color:  rgb(143, 128, 18);
+    height: 700px;
+}
+#contato h1{
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.3em;
+    text-align: center;
+}
+#contato p{
+    text-align: center;
+    padding-top: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+#contato img{
+    display: flex;
+    margin-left: 45.5%;
+    width: 120px;
+    height: 100px;
+    padding-top: 100px;
+}
+hr{
+    width: 600px;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+footer{
+    height: 120px;
+    background-color: rgb(97, 87, 8);
+}
+
+footer p{
+    text-align: center;
+    color: white;
+    padding-top: 20px;
+}
+
+#final{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    gap: 20px;
+}
+footer img{
+    width: 30px;
+    height: 30px;
+}
