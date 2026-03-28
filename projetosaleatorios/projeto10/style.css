@@ -5,7 +5,8 @@
     padding: 0px;
 }
 body{
-    overflow-x: hidden;
+    background: fixed;
+    overflow: hidden;
 }
 #cereja{
     background-color: rgb(251, 180, 50);
