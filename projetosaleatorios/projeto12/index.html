@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body>
+    <div id="formulario">
+        <form action="cadastro.php" method="post" autocomplete="on">
+            <h1>Formulário Simples HTML/CSS/PHP</h1>
+            <hr>
+            <br>
+            <legend>Dados Pessoais</legend>
+            <br>
+            <label for="inome">Nome:</label>
+            <input type="text" name="nome" id="inome" required autocomplete="name"><br>
+            <label for="iuser">Usuário:</label>
+            <input type="text" name="user" id="iuser" required autocomplete="username"><br>
+            <label for="idata">Data de nascimento:</label>
+            <input type="date" name="data" id="idata" required >
+            <br>
+            <br>
+            <legend>Contato</legend>
+            <br>
+            <label for="iemail">E-mail:</label>
+            <input type="email" name="email" id="iemail" required autocomplete="email"><br>
+            <label for="iddd">Telefone:</label>
+            <input type="tel" name="ddd" id="iddd" required autocomplete="tel" placeholder="81"><input type="tel" name="telefone" id="itel" required placeholder="99999-9999" autocomplete="tel">
+            <br>
+            <br>
+            <legend>Segurança</legend>
+            <br>
+            <label for="isenha">Senha:</label>
+            <input type="password" name="senha" id="isenha" required>
+            <br>
+            <label for="iconf">Confirmar senha:</label>
+            <input type="password" name="confirmarsenha" id="iconf" required autocomplete="current-password"><br>
+            <input type="checkbox" name="termos" id="itermo" required>
+            <label for="itermo">
+                Eu aceito os <a href="#">termos de uso.</a>
+            </label>
+            
+            <br><br>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </form>
+    </div>
+</body>
+</html>
