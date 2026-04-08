@@ -4,3 +4,42 @@
     margin: 0px;
     padding: 0px;
 }
+
+div.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+div.item {
+    background-color: aqua;
+    border: 1px solid black;
+    height: 100px;
+}
+
+@media screen and (max-width: 1200px) {
+
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+}
+
+@media screen and (max-width: 992px) {
+
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    
+}
