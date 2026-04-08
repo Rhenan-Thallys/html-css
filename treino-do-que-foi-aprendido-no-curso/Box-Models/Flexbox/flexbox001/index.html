@@ -3,40 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cards Responsivos</title>
+    <title>Exercício de Flexbox</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            height: 400px;
+            width: 350px;
+            background-color: aqua;
+            display: flex;
+            border: 1px solid black;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .imagem {
+            width: 300px;
+            height: 200px;
+            background-color: gray;
+            border-radius: 20px;
+        }
+
+        .imagem:hover {
+            background-color: white;
+            border: 1px solid black;
+            transition: 1s;
+        }
+
+        button {
+            width: 100px;
+            height: 30px;
+            text-align: center;
+            color: black;
+            border: none;
+        }
+
+        button:hover {
+            background-color: black;
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <section class="container">
-        <div class="item">
-            <h1>CARD 1</h1>
-            <p>testando flex box</p>
-            <button>CLICAR</button>
+
+        <div class="card">
+            <div class="imagem"></div>
+            <h1>Título 1</h1>
+            <p>Descrição simples do card.</p>
+            <button>Ler mais</button>
         </div>
-        <div class="item">
-            <h1>CARD 2</h1>
-            <p>testando flex box</p>
-            <button>CLICAR</button>
+
+        <div class="card">
+            <div class="imagem"></div>
+            <h1>Título 2</h1>
+             <p>Descrição simples do card.</p>
+             <button>Ler mais</button>
         </div>
-        <div class="item">
-            <h1>CARD 3</h1>
-            <p>testando flex box</p>
-            <button>CLICAR</button>
+
+        <div class="card">
+            <div class="imagem"></div>
+            <h1>Título 3</h1>
+             <p>Descrição simples do card.</p>
+             <button>Ler mais</button>
         </div>
-        <div class="item">
-            <h1>CARD 4</h1>
-            <p>testando flex box</p>
-            <button>CLICAR</button>
+
+        <div class="card">
+            <div class="imagem"></div>
+            <h1>Título 4</h1>
+             <p>Descrição simples do card.</p>
+             <button>Ler mais</button>
         </div>
-        <div class="item">
-            <h1>CARD 5</h1>
-            <p>testando flex box</p>
-            <button>CLICAR</button>
+
+        <div class="card">
+            <div class="imagem"></div>
+            <h1>Título 5</h1>
+             <p>Descrição simples do card.</p>
+             <button>Ler mais</button>
         </div>
-        <div class="item">
-            <h1>CARD 6</h1>
-            <p>testando flex box</p>
-            <button>CLICAR</button>
+
+        <div class="card">
+            <div class="imagem"></div>
+            <h1>Título 6</h1>
+             <p>Descrição simples do card.</p>
+             <button>Ler mais</button>
         </div>
+
     </section>
 </body>
 </html>
