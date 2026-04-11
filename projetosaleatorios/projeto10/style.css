@@ -77,6 +77,15 @@ body{
         padding-bottom: 200px;
     }
 
+    div.conteiner img{
+        width: 100px;
+        height: 100px;
+    }
+
+    #i2 img {
+        margin-left: -40px;
+    }
+
     }
 
 main {
@@ -126,6 +135,10 @@ nav a {
     margin: 0 auto;
     font-size: 1.3em;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+nav a:hover {
+    color: #927929;
 }
 
 nav ul{
@@ -220,6 +233,50 @@ section.contato {
     color: white;
     text-align: center;
     margin: 0 auto;
+}
+
+section.contato img{
+    width: 100px;
+    height: 70px;
+    padding-top: 60px;
+}
+
+section.contato #p1{
+    padding-top: 10px;
+    font-weight: bold;
+    font-size: 2em;
+    padding-bottom: 70px;
+}
+
+.contatenos h1 {
+    padding-top: 60px;
+    padding-bottom: 10px;
+}
+
+.contatenos p{
+    font-size: 1em;
+}
+
+hr {
+    width: 600px;
+    margin: 0 auto;
+}
+
+form input {
+    padding: 10px;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+form textarea{
+    margin-top: 20px;
+    height: 80px;
+    width: 339px;
+    text-align: center;
+    margin-top: 10px;
+    border: 1px solid white;
+    background-color: transparent;
 }
 
 footer {
