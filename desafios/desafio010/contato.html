@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fale Conosco</title>
+    <style>
+
+        body {
+            background-color: #2fa866;
+        }
+
+        #contato {
+            display: flex;
+            justify-content: center;
+            border: 1ps solid black;
+            background-color: #ebe5c5;
+            height: 600px;
+            width: 500px;
+            margin: 0 auto;
+            margin-top: 50px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px gray;
+            background-image: linear-gradient(to top, #063d1e, #2fa866, #83e1ad);
+        }
+
+        #contato form {
+            margin-top: 130px;
+        }
+
+        #contato input {
+            margin-bottom: 10px;
+            height: 30px;
+            text-align: center;
+            width: 350px;
+            border: none;
+        }
+
+        #contato textarea {
+            text-align: center;
+            height: 200px;
+            width: 351.6px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div id="contato">
+            <form action="">
+                <label for="iemail"></label>
+                <input type="email" name="email" id="iemail" placeholder="Digite seu email"> <br>
+                <label for="imsg"></label>
+                <textarea name="mensagem" id="imsg" placeholder="Escreva sua mensagem..."></textarea>
+                <br>
+                <br>
+                <div class="el">
+                    <a href="https://gmail.com/send"><input type="submit" value="Enviar" style="width: 357px;"></a> <br>
+                    <input type="reset" value="Limpar" style="width: 357px;">
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
