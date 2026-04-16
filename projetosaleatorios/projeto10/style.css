@@ -72,12 +72,6 @@ body{
         margin-left: -40px;
     }
 
-    form {
-    margin: 0 auto;
-    justify-content: center;
-    align-content: center;
-}
-
 div.conteiner {
     display: flex;
     flex-direction: column;
@@ -87,18 +81,6 @@ div.conteiner {
 
 #i2 {
     align-self: flex-start;
-}
-
-form {
-     display: none;
-}
-
-#burguer {
-    display: flex;
-    color: white;
-    height: 300px;
-    background-color: gray;
-    justify-content: end;
 }
 
 nav {
@@ -286,47 +268,9 @@ section.contato #p1{
 }
 
 hr {
-    width: 600px;
+    max-width: 450px;
+    min-width: 450;
     margin: 0 auto;
-}
-
-form {
-    margin: 0 auto;
-    padding: 20px;
-}
-
-form input {
-    padding: 10px;
-    text-align: center;
-    background-color: transparent;
-    border: 1px solid white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    margin-bottom: 20px;
-    width: 133px;
-    margin: 20px;
-}
-
-input::placeholder {
-    color: #594916;
-}
-
-textarea::placeholder {
-    color: #594916;
-}
-
-form textarea{
-    height: 50px;
-    text-align: center;
-    border: 1px solid white;
-    background-color: transparent;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    padding-top: 30px;
-}
-
-#burguer {
-    display: none;
 }
 
 footer {
