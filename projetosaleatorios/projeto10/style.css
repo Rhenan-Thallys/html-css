@@ -35,8 +35,16 @@ body{
 
 @media  screen and (max-width:724px) {
     div.conv img {
-        width: 500px;
+        width: 470px;
     }
+
+    menu ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-left: -80px;
+}
 }
 
 @media screen and (max-width: 768px) {
@@ -89,7 +97,7 @@ nav {
 
 hr {
     display: flex;
-    width: 300px;
+    width: 600px;
     justify-content: center;
 }
 
@@ -164,7 +172,7 @@ div.conv {
 }
 
 div.conv img{
-    width: 100%
+    width: 100%;
     display: flex;
     margin: 0 auto;
 }
@@ -268,14 +276,25 @@ section.contato #p1{
 }
 
 hr {
-    max-width: 450px;
-    min-width: 450;
+    width: 450px;
     margin: 0 auto;
 }
 
 footer {
     background-color: #594916;
     color: white;
+}
+
+.containerf {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+.containerf img {
+    width: 30px;
+    height: 30px;
+    padding-left: 50px;
 }
 
 footer p{
