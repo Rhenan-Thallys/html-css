@@ -83,10 +83,6 @@ div.conteiner {
     align-self: flex-start;
 }
 
-nav {
-    display: none;
-}
-
 hr {
     display: flex;
     width: 600px;
@@ -238,7 +234,7 @@ main button {
 }
 
 section.contato {
-    height: 700px;
+    height: 850px;
     background-color: #948224;
     color: white;
     text-align: center;
@@ -261,10 +257,14 @@ section.contato #p1{
 .contatenos h1 {
     padding-top: 60px;
     padding-bottom: 10px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .contatenos p{
     font-size: 1em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 hr {
@@ -275,6 +275,7 @@ hr {
 footer {
     background-color: #594916;
     color: white;
+    height: 130px;
 }
 
 .containerf {
@@ -284,12 +285,67 @@ footer {
 }
 
 .containerf img {
+    margin-top: 20px;
     width: 30px;
     height: 30px;
-    padding-left: 50px;
+    padding-left: 15px;
 }
 
 footer p{
     text-align: center;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top: 20px;
+}
+
+input {
+    margin: 10px;
+    margin-bottom: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid white;
+    background-color: transparent;
+    text-align: center;
+    width: 120px;
+    color: white;
+}
+
+input::placeholder {
+    color: #594916;
+}
+
+#inome {
+    padding: 12px;
+}
+
+#itel {
+    padding: 12px;
+}
+
+textarea {
+    width: 311px;
+    border: 1px solid white;
+    background-color: transparent;
+    text-align: center;
+    color: white;
+}
+
+textarea::placeholder {
+    padding-top: 20px;
+    color: #594916;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#enviar {
+    width: 120px;
+    padding: 10px;
+    background-color: white;
+    border: none;
+    color: #948224;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+#enviar:hover {
+    color: white;
+    background-color: #594916;
+    transition: 0.5s;
 }

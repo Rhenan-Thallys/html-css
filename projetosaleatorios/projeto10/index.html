@@ -54,13 +54,29 @@ Estamos ansiosos para te ver!</p>
                 <p class="p">Ligue para Bruno ou Laura: (11) 3456-7890 <br>
                 ou deixe uma mensagem:</p>
             </div>
+            <br>
+            <div class="formulario">
+
+                <form action="contato.php" method="post" autocomplete="on">
+                    <label for="inome"></label>
+                    <input type="text" name="nome" id="inome" placeholder="Nome" required autocomplete="username">
+                    <label for="itel"></label>
+                    <input type="tel" name="telefone" id="itel" placeholder="Telefone" required autocomplete="tel">
+                    <br>
+                    <textarea name="mensagem" id="imsg" placeholder="Adicione a mensagem..." rows="4" required autocomplete="on"></textarea>
+                    <br>
+                    <br>
+                    <input type="submit" value="ENVIAR" id="enviar">
+                </form>
+            </div>
         </section>
 
         <footer>
             <div class="containerf">
                 <a href="https://facebook.com"><img src="imagens/facebook.avif" alt=""></a>
-                <a href="https://instagram.com"><img src="imagens/instagram.avif" alt=""></a>
                 <a href="https://twitter.com"><img src="imagens/twitter.avif" alt=""></a>
+                <a href="" alt=""><img src="imagens/instagram.avif" alt="">
+                </a>
             </div>
             <p>© 2035 por Natal dos Moschinos. Orgulhosamente criado com Wix.com</p>
         </footer>
