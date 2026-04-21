@@ -37,14 +37,6 @@ body{
     div.conv img {
         width: 470px;
     }
-
-    menu ul{
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-left: -80px;
-}
 }
 
 @media screen and (max-width: 768px) {
