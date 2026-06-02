@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: white;
+            color: blue;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        menu{
+            display: flex;
+            background-color: black;
+            height: 35px;
+        }
+
+        menu ul{
+            list-style-type: none;
+            display: flex;
+            gap: 30px;
+            margin: 0 auto;
+            margin-top: 7px;
+            justify-content: space-between;
+        }
+
+        menu a {
+            text-decoration: none;
+            color: white;
+        }
+
+        menu a:hover {
+            background-color: burlywood;
+            color: black;
+            padding: 7.5px;
+            transition: 0.5s;
+            transform: translateY(-3);
+        }
+        .container {
+            border: 2px solid black;
+            height: 450px;
+            display: grid;
+            grid-template: repeat(4, 100px) / repeat(1, 100px);
+            gap: 5px;
+            justify-content: center;
+        }
+
+        .item {
+            border: 1px solid green;
+            background-color: black;
+            color: white;
+            justify-content: center;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <menu>
+        <ul>
+            <li><a href="#">INÍCIO</a></li>
+            <li><a href="#">PRODUTOS</a></li>
+            <li><a href="#">SOBRE</a></li>
+            <li><a href="#">CONTATO</a></li>
+        </ul>
+    </menu>
+
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+    </div>
+</body>
+</html>
