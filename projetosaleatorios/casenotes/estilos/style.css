@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+:root {
+    --fundo-principal: #e5e5e5;
+    --fundo-secundário: #111111;
+    --vermelho-principal: #B91111;
+    --vermelho-claro-hover: #E01919;
+    --branco: #FFFFFF;
+    --cinza-claro: #D0D0D0;
+    --cinza-escuro: #666666;
+    --titulo-principal: 'Special Elite' , cursive;
+    --texto-secundario: 'Montserrat' , sans-serif
+}
+
+header {
+    background-image: url(../photo-1419640303358-44f0d27f48e7.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 600px;
+}
+
+header h1 {
+    color: var(--vermelho-principal)
+}
+
+header h2 {
+    color: var(--branco);
+    font-family: var();
+}
+
+header p {
+    color: var(--branco);
+}
