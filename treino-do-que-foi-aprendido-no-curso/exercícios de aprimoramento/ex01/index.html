@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura e Layout</title>
+    <style>
+        
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: cornflowerblue;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div#perfil {
+            text-align: center
+        }
+
+        div#perfil img {
+            text-align: center;
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            border: 3px solid white;
+            box-shadow: 1px 1px 5px 0px black;
+            margin-top: 10px;
+        }
+
+        main h1 {
+            padding-top: 10px;
+            text-align: center;
+            color: khaki;
+        }
+
+        main p {
+            padding-top: 5px;
+            font-weight: bold;
+            text-align: center;
+            color: white;
+        }
+
+        div#social {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding-top: 100px;
+        }
+
+        div#social img {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            border: 1px solid white;
+        }
+
+        div#social img:hover {
+            transition: 0.6s;
+            transform: translateX(5px);
+            box-shadow: 1px 1px 8px 0px black;
+        }
+
+        div#contato {
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        div#contato input {
+            padding: 10px;
+            width: 100px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            border: none;
+            border-radius: 8px;
+            background-color: blue;
+            color: white;
+        }
+
+        div#contato input:hover {
+            box-shadow: 1px 1px 5px 0px khaki;
+            color: black;
+            background-color: cornflowerblue;
+            transition: 0.6s background;
+        }
+    </style>
+</head>
+<body>
+    <main>
+
+        <div id="perfil">
+            <img src="images.jpg" alt="">
+        </div>
+        <h1>Alina Refher</h1>
+        <p>empreendedora , tecnóloga e programadora</p>
+    </main>
+
+    <footer>
+        <div id="contato"><a href=""><input type="button" value="CONTATO"></a></div>
+
+        <div id="social">
+            <img src="logo-youtube.jpg" alt="">
+            <img src="logo-instagram.jpg" alt="">
+            <img src="logo-github.jpg" alt="">
+        </div>
+    </footer>
+</body>
+</html>
