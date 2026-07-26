@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/c091e830b3.js" crossorigin="anonymous"></script>
+    <title>ToDo App</title>
+    <style>
+
+        @charset "UTF-8";
+
+            * {
+        margin: 0px;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    main p {
+        padding: 15px;
+    }
+        div#addtask{
+            display: flex;
+            gap: 30px;
+        }
+
+        #start select{
+            width: 200px;
+            height: 50px;
+            background-color: lightgray;
+            border-radius: 8px;
+            border: none;
+        }
+
+        #end select {
+            width: 200px;
+            height: 50px;
+            background-color: lightgray;
+            border: none;
+            border-radius: 8px;
+        }
+
+        #repeat {
+            background-color: rgba(211, 211, 211, 0.391);
+            width: 450px;
+            height: 50px;
+            border-radius: 8px;
+            border: none;
+        }
+
+        button {
+            margin-top: 320px;
+            background-color: blue;
+            text-align: center;
+            height: 50px;
+            width: 400px;
+            border-radius: 8px;
+            color: white;
+            border: none;
+            margin-left: 38px;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" target="_self"><i class="fa-solid fa-arrow-left"></i></a>
+    </header>
+
+    <main>
+        <h1>Adicionar Tarefa</h1>
+
+        <p>Rótulo</p>
+
+        <div></div>
+
+        <div id="addtask">
+            <div id="start">
+                <h3>Início</h3>
+                <select name="categoria" id="categoria">
+                    <option>00:00</option>
+                    <option>01:00</option>
+                    <option>02:00</option>
+                    <option>03:00</option>
+                    <option>04:00</option>
+                    <option>05:00</option>
+                    <option>06:00</option>
+                    <option>07:00</option>
+                    <option>08:00</option>
+                    <option>09:00</option>
+                    <option>10:00</option>
+                    <option>11:00</option>
+                    <option>12:00</option>
+                    <option>13:00</option>
+                    <option>14:00</option>
+                    <option>15:00</option>
+                    <option>16:00</option>
+                    <option>17:00</option>
+                    <option>18:00</option>
+                    <option>19:00</option>
+                    <option>20:00</option>
+                    <option>21:00</option>
+                    <option>22:00</option>
+                    <option>23:00</option>
+                </select>
+            </div>
+            <div id="end">
+                <h3>Fim</h3>
+                <select name="categoria" id="categoria">
+                <option>00:00</option>
+                <option>01:00</option>
+                <option>02:00</option>
+                <option>03:00</option>
+                <option>04:00</option>
+                <option>05:00</option>
+                <option>06:00</option>
+                <option>07:00</option>
+                <option>08:00</option>
+                <option>09:00</option>
+                <option>10:00</option>
+                <option>11:00</option>
+                <option>12:00</option>
+                <option>13:00</option>
+                <option>14:00</option>
+                <option>15:00</option>
+                <option>16:00</option>
+                <option>17:00</option>
+                <option>18:00</option>
+                <option>19:00</option>
+                <option>20:00</option>
+                <option>21:00</option>
+                <option>22:00</option>
+                <option>23:00</option>
+            </select>
+            </div>
+        </div>
+        <br>
+        <h2>Repetir</h2>
+        <select name="repeat" id="repeat">
+            <option>Todos os dias</option>
+            <option>Segunda-Feira</option>
+            <option>Terça-Feira</option>
+            <option>Quarta-Feira</option>
+            <option>Quinta-Feira</option>
+            <option>Sexta-Feira</option>
+            <option>Sábado</option>
+            <option>Domingo</option>
+        </select>
+        <br>
+        <a href=""><button>Criar Tarefa</button></a>
+    </main>
+</body>
+</html>
