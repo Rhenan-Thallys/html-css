@@ -1,55 +1,1396 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nordak</title>
+
+    <title>Isabela Martins | Nail Designer</title>
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
     <style>
 
-        * {
-            margin: 0px;
-            padding: 0px;
+        /* =====================================
+           CORES
+        ====================================== */
+
+        :root {
+            --rosa: #f3dadd;
+            --rosa-escuro: #c88e98;
+
+            --verde: #dfe9d9;
+            --verde-escuro: #71876b;
+
+            --creme: #f7f3eb;
+            --branco: #ffffff;
+            --preto: #202120;
+
+            --texto: #6c6c66;
+            --borda: #e4e0d8;
         }
 
-        body {
-            background-image: url(imagens/photo-1704482622067-f728f2d83265.avif);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-attachment: fixed;
+
+        /* =====================================
+           RESET
+        ====================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            background: var(--creme);
+            color: var(--preto);
+        }
+
+
+        img {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+
+        section {
+            padding: 85px 8%;
+        }
+
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+
+        /* =====================================
+           TEXTOS
+        ====================================== */
+
+        .tag {
+            color: var(--verde-escuro);
+
+            font-size: 10px;
+            font-weight: 700;
+
+            text-transform: uppercase;
+            letter-spacing: 2px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .titulo {
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: clamp(48px, 6vw, 76px);
+
+            font-weight: 500;
+            line-height: .95;
+
+            margin-bottom: 22px;
+        }
+
+
+        .descricao {
+            color: var(--texto);
+
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+
+        /* =====================================
+           BOTÕES
+        ====================================== */
+
+        .btn {
+            display: inline-block;
+
+            padding: 16px 25px;
+
+            text-decoration: none;
+
+            text-transform: uppercase;
+
+            font-size: 10px;
+            font-weight: 700;
+
+            letter-spacing: 1px;
+
+            transition: .3s;
+        }
+
+
+        .btn-principal {
+            background: var(--preto);
+            color: var(--branco);
+        }
+
+
+        .btn-principal:hover {
+            background: var(--verde-escuro);
+        }
+
+
+        .btn-claro {
+            background: var(--branco);
+            color: var(--preto);
+
+            border: 1px solid var(--borda);
+        }
+
+
+        .btn-claro:hover {
+            background: var(--rosa);
+        }
+
+
+        /* =====================================
+           HEADER
+        ====================================== */
+
+        header {
+            background: var(--creme);
+
+            padding: 22px 8%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            border-bottom: 1px solid var(--borda);
+        }
+
+
+        .logo {
+            text-decoration: none;
+
+            font-family: "Cormorant Garamond", serif;
+
+            color: var(--preto);
+
+            font-size: 34px;
+            font-weight: 600;
+
+            line-height: .8;
+        }
+
+
+        .logo span {
+            display: block;
+
+            font-family: "DM Sans", sans-serif;
+
+            color: var(--verde-escuro);
+
+            font-size: 8px;
+
+            text-align: center;
+
+            text-transform: uppercase;
+
+            letter-spacing: 2px;
+
+            margin-top: 10px;
+        }
+
 
         nav {
             display: flex;
-            justify-content: center;
-            font-family: Arial, Helvetica, sans-serif;
-            color: white;
-            margin-top: 15px;
+            gap: 28px;
         }
 
-        nav ul {
-            list-style-type: none;
+
+        nav a {
+            text-decoration: none;
+
+            color: var(--preto);
+
+            font-size: 10px;
+            font-weight: 700;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+
+            transition: .3s;
+        }
+
+
+        nav a:hover {
+            color: var(--rosa-escuro);
+        }
+
+
+        .btn-topo {
+            background: var(--verde);
+
+            color: var(--preto);
+
+            text-decoration: none;
+
+            padding: 13px 20px;
+
+            font-size: 10px;
+            font-weight: 700;
+
+            text-transform: uppercase;
+
+            transition: .3s;
+        }
+
+
+        .btn-topo:hover {
+            background: var(--rosa);
+        }
+
+
+        /* =====================================
+           HERO
+        ====================================== */
+
+        .hero {
+            background: linear-gradient(
+                120deg,
+                var(--rosa),
+                var(--creme),
+                var(--verde)
+            );
+
+            min-height: 650px;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            align-items: center;
+
+            gap: 60px;
+        }
+
+
+        .hero-texto {
+            max-width: 600px;
+        }
+
+
+        .hero h1 {
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: clamp(60px, 7vw, 100px);
+
+            font-weight: 500;
+
+            line-height: .85;
+
+            letter-spacing: -3px;
+
+            margin-bottom: 25px;
+        }
+
+
+        .hero h1 span {
+            color: var(--rosa-escuro);
+            font-style: italic;
+        }
+
+
+        .hero-texto .descricao {
+            max-width: 520px;
+        }
+
+
+        .hero-botoes {
+            margin-top: 30px;
+
             display: flex;
-            justify-content: space-between;
-            gap: 130px;
+            gap: 12px;
+
+            flex-wrap: wrap;
         }
 
-        nav ul li:hover {
-            background: black;
-            transform: translateX(5px);
-            padding: 10px;
-            border-radius: 8px;
+
+        .hero-imagem img {
+            height: 500px;
         }
+
+
+        /* =====================================
+           SOBRE
+        ====================================== */
+
+        .sobre {
+            background: var(--branco);
+        }
+
+
+        .sobre-grid {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 70px;
+
+            align-items: center;
+        }
+
+
+        .sobre-imagem img {
+            height: 520px;
+        }
+
+
+        .sobre-texto .descricao {
+            margin-bottom: 18px;
+            max-width: 520px;
+        }
+
+
+        /* =====================================
+           BIO
+        ====================================== */
+
+        .bio {
+            background: var(--verde);
+        }
+
+
+        .bio-grid {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 60px;
+
+            align-items: center;
+        }
+
+
+        .bio h2 {
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: clamp(45px, 5vw, 65px);
+
+            font-weight: 500;
+
+            line-height: .95;
+        }
+
+
+        .bio-lista {
+            display: grid;
+        }
+
+
+        .bio-item {
+            padding: 17px 0;
+
+            border-bottom: 1px solid rgba(0,0,0,.12);
+
+            font-size: 14px;
+        }
+
+
+        .bio-item strong {
+            color: var(--rosa-escuro);
+            margin-right: 10px;
+        }
+
+
+        /* =====================================
+           SERVIÇOS
+        ====================================== */
+
+        .servicos {
+            background: var(--creme);
+        }
+
+
+        .servicos-topo {
+            text-align: center;
+
+            max-width: 700px;
+
+            margin: auto auto 50px;
+        }
+
+
+        .servicos-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+
+        .servico {
+            background: var(--branco);
+
+            border: 1px solid var(--borda);
+
+            padding: 32px;
+
+            transition: .3s;
+        }
+
+
+        .servico:hover {
+            transform: translateY(-5px);
+            border-color: var(--rosa-escuro);
+        }
+
+
+        .servico img {
+            height: 230px;
+            margin-bottom: 25px;
+        }
+
+
+        .servico h3 {
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 38px;
+
+            font-weight: 500;
+
+            margin-bottom: 12px;
+        }
+
+
+        .servico p {
+            color: var(--texto);
+
+            font-size: 14px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =====================================
+           PROCEDIMENTOS
+        ====================================== */
+
+        .procedimentos {
+            background: var(--preto);
+            color: var(--branco);
+        }
+
+
+        .procedimentos-topo {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+
+        .procedimentos .tag {
+            color: var(--rosa);
+        }
+
+
+        .procedimentos-grid {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            border-top: 1px solid rgba(255,255,255,.15);
+        }
+
+
+        .procedimento {
+            padding: 22px;
+
+            border-bottom: 1px solid rgba(255,255,255,.15);
+
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 27px;
+        }
+
+
+        .procedimento:nth-child(odd) {
+            border-right: 1px solid rgba(255,255,255,.15);
+        }
+
+
+        /* =====================================
+           GALERIA DE UNHAS
+        ====================================== */
+
+        .galeria {
+            background: var(--branco);
+        }
+
+
+        .galeria-topo {
+            text-align: center;
+
+            max-width: 700px;
+
+            margin: auto auto 45px;
+        }
+
+
+        .galeria-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 18px;
+        }
+
+
+        .galeria-grid img {
+            height: 350px;
+
+            transition: .4s;
+        }
+
+
+        .galeria-grid img:hover {
+            transform: scale(1.02);
+        }
+
+
+        /* =====================================
+           DIFERENCIAIS
+        ====================================== */
+
+        .diferenciais {
+            background: var(--verde);
+        }
+
+
+        .diferenciais-grid {
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 20px;
+
+            margin-top: 45px;
+        }
+
+
+        .diferencial {
+            padding: 25px 10px;
+
+            border-top: 2px solid var(--verde-escuro);
+        }
+
+
+        .diferencial h3 {
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 30px;
+
+            font-weight: 600;
+
+            margin-bottom: 10px;
+        }
+
+
+        .diferencial p {
+            color: var(--texto);
+
+            font-size: 13px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =====================================
+           CONTATO
+        ====================================== */
+
+        .contato {
+            background: var(--rosa);
+
+            text-align: center;
+
+            padding: 100px 8%;
+        }
+
+
+        .contato .descricao {
+            max-width: 600px;
+
+            margin: 0 auto 30px;
+        }
+
+
+        /* =====================================
+           FOOTER
+        ====================================== */
+
+        footer {
+            background: var(--preto);
+
+            color: var(--branco);
+
+            text-align: center;
+
+            padding: 40px 8%;
+        }
+
+
+        footer h3 {
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 42px;
+
+            font-weight: 500;
+
+            margin-bottom: 8px;
+        }
+
+
+        footer p {
+            color: #aaa;
+
+            font-size: 12px;
+        }
+
+
+        /* =====================================
+           RESPONSIVIDADE
+        ====================================== */
+
+        @media (max-width: 950px) {
+
+            .hero,
+            .sobre-grid,
+            .bio-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .hero {
+                text-align: center;
+            }
+
+
+            .hero-texto {
+                margin: auto;
+            }
+
+
+            .hero-botoes {
+                justify-content: center;
+            }
+
+
+            .servicos-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+
+            .diferenciais-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 650px) {
+
+            section {
+                padding: 70px 6%;
+            }
+
+
+            header {
+                padding: 22px 6%;
+            }
+
+
+            nav,
+            .btn-topo {
+                display: none;
+            }
+
+
+            .hero {
+                padding: 70px 6%;
+            }
+
+
+            .hero h1 {
+                font-size: 65px;
+            }
+
+
+            .hero-imagem img,
+            .sobre-imagem img {
+                height: 400px;
+            }
+
+
+            .servicos-grid,
+            .galeria-grid,
+            .diferenciais-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .procedimentos-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .procedimento:nth-child(odd) {
+                border-right: none;
+            }
+
+
+            .galeria-grid img {
+                height: 380px;
+            }
+
+
+            .hero-botoes {
+                flex-direction: column;
+            }
+
+
+            .hero-botoes .btn {
+                width: 100%;
+            }
+
+        }
+
     </style>
+
 </head>
+
+
 <body>
+
+
+    <!-- HEADER -->
+
     <header>
+
+        <a href="#inicio" class="logo">
+
+            Isabela Martins
+
+            <span>Nail Designer & Brows</span>
+
+        </a>
+
+
         <nav>
-            <ul>
-                <li>Main menu</li>
-                <li>Log-in</li>
-                <li>Sign-up</li>
-            </ul>
+
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#contato">Contato</a>
+
         </nav>
+
+
+        <a href="#contato" class="btn-topo">
+            Agendar
+        </a>
+
     </header>
+
+
+
+    <!-- HERO -->
+
+    <section class="hero" id="inicio">
+
+        <div class="hero-texto">
+
+            <div class="tag">
+                Beleza • Naturalidade • Autoestima
+            </div>
+
+
+            <h1>
+
+                Sua beleza em
+
+                <br>
+
+                <span>cada detalhe.</span>
+
+            </h1>
+
+
+            <p class="descricao">
+
+                Um atendimento pensado para valorizar sua beleza natural
+                e proporcionar resultados delicados, bonitos e duradouros.
+
+            </p>
+
+
+            <div class="hero-botoes">
+
+                <a href="#contato" class="btn btn-principal">
+                    Agendar atendimento
+                </a>
+
+
+                <a href="#servicos" class="btn btn-claro">
+                    Conhecer serviços
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="hero-imagem">
+
+            <!-- FOTO DE BELEZA -->
+
+            <img
+                src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1000&q=90"
+                alt="Beleza feminina">
+
+        </div>
+
+    </section>
+
+
+
+    <!-- SOBRE -->
+
+    <section class="sobre" id="sobre">
+
+        <div class="container sobre-grid">
+
+
+            <div class="sobre-imagem">
+
+                <!-- FOTO DA PROFISSIONAL -->
+
+                <img
+                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1000&q=90"
+                    alt="Profissional de beleza">
+
+            </div>
+
+
+
+            <div class="sobre-texto">
+
+                <div class="tag">
+                    Sobre mim
+                </div>
+
+
+                <h2 class="titulo">
+
+                    Beleza natural também é uma forma de arte.
+
+                </h2>
+
+
+                <p class="descricao">
+
+                    Sou Nail Designer e Designer de Sobrancelhas,
+                    apaixonada por transformar pequenos detalhes em
+                    grandes momentos de autoestima.
+
+                </p>
+
+
+                <p class="descricao">
+
+                    Meu objetivo é proporcionar resultados que valorizem
+                    quem você já é, respeitando sua beleza, seu estilo
+                    e sua individualidade.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- BIO -->
+
+    <section class="bio">
+
+        <div class="container bio-grid">
+
+
+            <div>
+
+                <div class="tag">
+                    Meu trabalho
+                </div>
+
+
+                <h2>
+
+                    Elevando a sua autoestima através de cada detalhe.
+
+                </h2>
+
+            </div>
+
+
+
+            <div class="bio-lista">
+
+
+                <div class="bio-item">
+                    <strong>•</strong> Nail Designer
+                </div>
+
+
+                <div class="bio-item">
+                    <strong>•</strong> Designer de Sobrancelhas
+                </div>
+
+
+                <div class="bio-item">
+                    <strong>•</strong> Especialista em naturalidade
+                </div>
+
+
+                <div class="bio-item">
+                    <strong>•</strong> Beleza e durabilidade em cada detalhe
+                </div>
+
+
+                <div class="bio-item">
+                    <strong>•</strong> Elevando a sua autoestima
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- SERVIÇOS -->
+
+    <section class="servicos" id="servicos">
+
+        <div class="container">
+
+
+            <div class="servicos-topo">
+
+                <div class="tag">
+                    Serviços
+                </div>
+
+
+                <h2 class="titulo">
+
+                    Cuidado pensado para você.
+
+                </h2>
+
+
+                <p class="descricao">
+
+                    Conheça alguns dos serviços disponíveis para
+                    cuidar da sua beleza e autoestima.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="servicos-grid">
+
+
+                <!-- UNHAS -->
+
+                <div class="servico">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=800&q=90"
+                        alt="Unhas decoradas">
+
+
+                    <h3>
+                        Unhas
+                    </h3>
+
+
+                    <p>
+
+                        Cuidados, técnicas e designs para unhas bonitas,
+                        resistentes e cheias de personalidade.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- SOBRANCELHAS -->
+
+                <div class="servico">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1487412912498-0447578fcca8?auto=format&fit=crop&w=800&q=90"
+                        alt="Design de sobrancelhas">
+
+
+                    <h3>
+                        Sobrancelhas
+                    </h3>
+
+
+                    <p>
+
+                        Um design personalizado para valorizar a harmonia
+                        e a beleza natural do seu rosto.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- AUTOCUIDADO -->
+
+                <div class="servico">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=800&q=90"
+                        alt="Autocuidado">
+
+
+                    <h3>
+                        Autocuidado
+                    </h3>
+
+
+                    <p>
+
+                        Um momento especial para cuidar de você e elevar
+                        ainda mais a sua autoestima.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- PROCEDIMENTOS -->
+
+    <section class="procedimentos">
+
+        <div class="container">
+
+
+            <div class="procedimentos-topo">
+
+                <div class="tag">
+                    Procedimentos
+                </div>
+
+
+                <h2 class="titulo">
+
+                    Escolha o seu momento de cuidado.
+
+                </h2>
+
+            </div>
+
+
+
+            <div class="procedimentos-grid">
+
+
+                <div class="procedimento">
+                    Manicure tradicional
+                </div>
+
+
+                <div class="procedimento">
+                    Esmaltação em gel
+                </div>
+
+
+                <div class="procedimento">
+                    Alongamento de unhas
+                </div>
+
+
+                <div class="procedimento">
+                    Manutenção de alongamento
+                </div>
+
+
+                <div class="procedimento">
+                    Blindagem de unhas
+                </div>
+
+
+                <div class="procedimento">
+                    Nail art personalizada
+                </div>
+
+
+                <div class="procedimento">
+                    Design de sobrancelhas
+                </div>
+
+
+                <div class="procedimento">
+                    Design com henna
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- GALERIA -->
+
+    <section class="galeria">
+
+        <div class="container">
+
+
+            <div class="galeria-topo">
+
+                <div class="tag">
+                    Trabalhos
+                </div>
+
+
+                <h2 class="titulo">
+
+                    Detalhes que fazem diferença.
+
+                </h2>
+
+
+                <p class="descricao">
+
+                    Alguns exemplos de estilos e inspirações para unhas.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="galeria-grid">
+
+
+                <!-- FOTO DE UNHAS -->
+
+                <img
+                    src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=800&q=90"
+                    alt="Unhas bonitas">
+
+
+                <!-- FOTO DE UNHAS -->
+
+                <img
+                    src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=800&q=90"
+                    alt="Design de unhas">
+
+
+                <!-- FOTO DE UNHAS -->
+
+                <img
+                    src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=800&q=90"
+                    alt="Unhas decoradas">
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- DIFERENCIAIS -->
+
+    <section class="diferenciais">
+
+        <div class="container">
+
+
+            <div class="tag">
+                Diferenciais
+            </div>
+
+
+            <h2 class="titulo">
+
+                Um atendimento pensado para você.
+
+            </h2>
+
+
+
+            <div class="diferenciais-grid">
+
+
+                <div class="diferencial">
+
+                    <h3>Personalizado</h3>
+
+                    <p>
+                        Cada atendimento é adaptado ao seu estilo.
+                    </p>
+
+                </div>
+
+
+
+                <div class="diferencial">
+
+                    <h3>Naturalidade</h3>
+
+                    <p>
+                        Resultados que valorizam sua beleza natural.
+                    </p>
+
+                </div>
+
+
+
+                <div class="diferencial">
+
+                    <h3>Qualidade</h3>
+
+                    <p>
+                        Atenção aos produtos, técnicas e detalhes.
+                    </p>
+
+                </div>
+
+
+
+                <div class="diferencial">
+
+                    <h3>Durabilidade</h3>
+
+                    <p>
+                        Resultados bonitos para acompanhar sua rotina.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- CONTATO -->
+
+    <section class="contato" id="contato">
+
+
+        <div class="tag">
+            Agendamentos
+        </div>
+
+
+        <h2 class="titulo">
+
+            Reserve um momento para você.
+
+        </h2>
+
+
+        <p class="descricao">
+
+            Cuide da sua beleza, eleve sua autoestima e tenha
+            uma experiência pensada especialmente para você.
+
+        </p>
+
+
+        <!-- TROQUE # PELO LINK DO WHATSAPP -->
+
+        <a href="#" class="btn btn-principal">
+
+            Agendar pelo WhatsApp
+
+        </a>
+
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h3>
+            Isabela Martins
+        </h3>
+
+
+        <p>
+            Nail Designer • Designer de Sobrancelhas
+        </p>
+
+
+        <br>
+
+
+        <p>
+            © 2026 • Todos os direitos reservados.
+        </p>
+
+    </footer>
+
+
 </body>
 </html>

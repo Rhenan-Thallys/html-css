@@ -1,0 +1,1000 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1d2939;
+    background: #ffffff;
+    line-height: 1.6;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================
+   CORES DA SOCIEDADE
+========================= */
+
+:root {
+
+    /* PRINCIPAIS */
+
+    --blue: #0757a5;
+
+    --blue-dark: #063b70;
+
+    --green: #168447;
+
+    --green-dark: #0d6333;
+
+    --yellow: #f2c230;
+
+    /* NEUTRAS */
+
+    --dark: #10212b;
+
+    --gray: #667085;
+
+    --light: #f5f9f7;
+
+    --white: #ffffff;
+
+    --border: #e4e9e6;
+
+    --max-width: 1150px;
+}
+
+
+/* =========================
+   CAPA
+========================= */
+
+.hero {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    position: relative;
+
+    color: white;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(6, 59, 112, .94),
+            rgba(22, 132, 71, .88)
+        ),
+        url("imagens/aula.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    overflow: hidden;
+}
+
+
+/*
+    Detalhe amarelo na parte inferior
+*/
+
+.hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 7px;
+
+    background: var(--yellow);
+}
+
+
+.hero-content {
+
+    width: 90%;
+
+    max-width: 800px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.logo img {
+
+    width: 115px;
+
+    height: 115px;
+
+    object-fit: contain;
+
+    margin: 0 auto 25px;
+
+    background: white;
+
+    padding: 8px;
+
+    border-radius: 50%;
+}
+
+
+.small-title {
+
+    color: var(--yellow);
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 15px;
+}
+
+
+.hero h1 {
+
+    font-size: clamp(42px, 7vw, 78px);
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+}
+
+
+.hero h1 span {
+
+    color: var(--yellow);
+}
+
+
+.hero-text {
+
+    max-width: 650px;
+
+    margin: 0 auto 35px;
+
+    color: #f4f7f5;
+
+    font-size: 18px;
+}
+
+
+/* =========================
+   BOTÕES
+========================= */
+
+.button {
+
+    display: inline-block;
+
+    padding: 14px 30px;
+
+    background: var(--yellow);
+
+    color: #17220e;
+
+    border-radius: 5px;
+
+    font-weight: bold;
+
+    transition: .3s;
+}
+
+
+.button:hover {
+
+    background: #ffd84d;
+
+    transform: translateY(-2px);
+
+}
+
+
+.button-light {
+
+    background: white;
+
+    color: var(--blue);
+}
+
+
+.button-light:hover {
+
+    background: #f1f1f1;
+
+}
+
+
+/* =========================
+   SEÇÕES
+========================= */
+
+section {
+
+    padding: 100px 7%;
+
+}
+
+
+.section-label {
+
+    color: var(--green);
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 12px;
+}
+
+
+h2 {
+
+    font-size: clamp(32px, 5vw, 50px);
+
+    line-height: 1.15;
+
+    color: var(--blue-dark);
+
+    margin-bottom: 25px;
+}
+
+
+.section-header {
+
+    max-width: 700px;
+
+    margin: 0 auto 55px;
+
+    text-align: center;
+}
+
+
+.section-header > p:last-child {
+
+    color: var(--gray);
+}
+
+
+/* =========================
+   SOBRE
+========================= */
+
+.about {
+
+    max-width: var(--max-width);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+
+.about-image {
+
+    position: relative;
+}
+
+
+.about-image::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 100%;
+
+    height: 100%;
+
+    border: 5px solid var(--yellow);
+
+    left: -5px;
+
+    top: -4.5px;
+
+    border-radius: 8px;
+
+    z-index: -1;
+
+    background-color: gray;
+
+}
+
+
+.about-image img {
+
+    height: 500px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+}
+
+
+.about-content p:not(.section-label) {
+
+    color: var(--gray);
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================
+   HISTÓRIA
+========================= */
+
+.history {
+
+    background:
+
+        linear-gradient(
+            135deg,
+            var(--blue-dark),
+            var(--green-dark)
+        );
+
+    color: white;
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.history::before {
+
+    content: "♪";
+
+    position: absolute;
+
+    font-size: 300px;
+
+    right: -30px;
+
+    bottom: -100px;
+
+    color: rgba(255,255,255,.04);
+}
+
+
+.history-content {
+
+    max-width: 800px;
+
+    margin: auto;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.history .section-label {
+
+    color: var(--yellow);
+}
+
+
+.history h2 {
+
+    color: white;
+}
+
+
+.history-content p:not(.section-label) {
+
+    color: #e2ebe6;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================
+   AULAS
+========================= */
+
+.classes {
+
+    background: var(--light);
+}
+
+
+.class-grid {
+
+    max-width: var(--max-width);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.class-card {
+
+    background: white;
+
+    padding: 40px 30px;
+
+    border-radius: 8px;
+
+    text-align: center;
+
+    border-top: 5px solid var(--green);
+
+    box-shadow: 0 8px 30px rgba(0,0,0,.06);
+
+    transition: .3s;
+}
+
+
+.class-card:nth-child(2) {
+
+    border-top-color: var(--blue);
+
+}
+
+
+.class-card:nth-child(3) {
+
+    border-top-color: var(--yellow);
+
+}
+
+
+.class-card:hover {
+
+    transform: translateY(-7px);
+
+    box-shadow: 0 15px 35px rgba(0,0,0,.10);
+}
+
+
+.class-icon {
+
+    font-size: 42px;
+
+    margin-bottom: 20px;
+}
+
+
+.class-card h3 {
+
+    color: var(--blue-dark);
+
+    margin-bottom: 12px;
+
+    font-size: 22px;
+}
+
+
+.class-card p {
+
+    color: var(--gray);
+}
+
+
+/* =========================
+   HORÁRIOS
+========================= */
+
+.schedule {
+
+    max-width: 950px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+
+.schedule-box {
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,.04);
+}
+
+
+.schedule-item {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 25px 30px;
+
+    background: white;
+
+    border-bottom: 1px solid var(--border);
+}
+
+
+.schedule-item:last-child {
+
+    border-bottom: none;
+}
+
+
+.schedule-item:nth-child(even) {
+
+    background: var(--light);
+}
+
+
+.day {
+
+    font-weight: bold;
+
+    color: var(--green);
+
+    letter-spacing: 2px;
+}
+
+
+.schedule-item strong {
+
+    color: var(--blue);
+}
+
+
+.schedule-note {
+
+    margin-top: 20px;
+
+    color: var(--gray);
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   LOCAL
+========================= */
+
+.location {
+
+    max-width: var(--max-width);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+
+.location-content > p:not(.section-label) {
+
+    color: var(--gray);
+
+    margin-bottom: 25px;
+}
+
+
+.address {
+
+    display: flex;
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+
+.address > span {
+
+    font-size: 30px;
+}
+
+
+.address strong {
+
+    color: var(--blue-dark);
+}
+
+
+.address p {
+
+    color: var(--gray);
+}
+
+
+.map-placeholder {
+
+    height: 350px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #eaf4ef,
+            #e8f0f8
+        );
+
+    border: 2px dashed var(--green);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 8px;
+}
+
+
+.map-placeholder div {
+
+    text-align: center;
+
+    color: var(--gray);
+}
+
+
+.map-placeholder span {
+
+    font-size: 45px;
+}
+
+
+/* =========================
+   BENEFÍCIOS
+========================= */
+
+.benefits {
+
+    background: var(--light);
+}
+
+
+.benefit-grid {
+
+    max-width: var(--max-width);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 30px;
+}
+
+
+.benefit {
+
+    padding: 25px 0;
+
+    border-top: 3px solid var(--green);
+}
+
+
+.benefit:nth-child(2) {
+
+    border-color: var(--blue);
+}
+
+
+.benefit:nth-child(3) {
+
+    border-color: var(--yellow);
+}
+
+
+.benefit:nth-child(4) {
+
+    border-color: var(--green);
+}
+
+
+.benefit span {
+
+    color: var(--blue);
+
+    font-weight: bold;
+
+    font-size: 14px;
+}
+
+
+.benefit h3 {
+
+    color: var(--blue-dark);
+
+    margin: 10px 0;
+
+    font-size: 22px;
+}
+
+
+.benefit p {
+
+    color: var(--gray);
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.cta {
+
+    background:
+
+        linear-gradient(
+            135deg,
+            var(--green),
+            var(--blue)
+        );
+
+    color: white;
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.cta::after {
+
+    content: "♫";
+
+    position: absolute;
+
+    right: 5%;
+
+    bottom: -70px;
+
+    font-size: 250px;
+
+    color: rgba(255,255,255,.07);
+}
+
+
+.cta-content {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.cta .section-label {
+
+    color: var(--yellow);
+}
+
+
+.cta h2 {
+
+    color: white;
+}
+
+
+.cta p:not(.section-label) {
+
+    color: #edf7f1;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    background: var(--blue-dark);
+
+    color: white;
+
+    padding: 50px 7% 20px;
+
+    border-top: 5px solid var(--yellow);
+}
+
+
+.footer-content {
+
+    max-width: var(--max-width);
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+.footer-content h3 {
+
+    margin-bottom: 8px;
+
+    color: white;
+}
+
+
+.footer-content p {
+
+    color: #bcd0df;
+}
+
+
+.copyright {
+
+    max-width: var(--max-width);
+
+    margin: 40px auto 0;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255,255,255,.15);
+
+    color: #91aabd;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 850px) {
+
+    section {
+
+        padding: 75px 6%;
+    }
+
+
+    .about {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+
+    .about-image {
+
+        order: 2;
+    }
+
+
+    .about-image img {
+
+        height: 350px;
+    }
+
+
+    .class-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .location {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .benefit-grid {
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .hero {
+
+        min-height: 90vh;
+    }
+
+
+    .hero h1 {
+
+        font-size: 42px;
+    }
+
+
+    .hero-text {
+
+        font-size: 16px;
+    }
+
+
+    .schedule-item {
+
+        padding: 20px 15px;
+    }
+
+
+    .schedule-item strong {
+
+        font-size: 14px;
+    }
+
+
+    .benefit-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .footer-content {
+
+        flex-direction: column;
+    }
+
+}

@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shadow Strike</title>
+
+    <style>
+
+        /* ==============================
+           RESET
+        ============================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #07090d;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            overflow-x: hidden;
+        }
+
+
+        /* ==============================
+           FUNDO
+        ============================== */
+
+        body::before {
+
+            content: "";
+
+            position: fixed;
+
+            inset: 0;
+
+            background:
+
+                radial-gradient(
+                    circle at 20% 30%,
+                    rgba(0, 140, 255, 0.12),
+                    transparent 25%
+                ),
+
+                radial-gradient(
+                    circle at 80% 70%,
+                    rgba(255, 0, 80, 0.10),
+                    transparent 25%
+                );
+
+            pointer-events: none;
+
+            z-index: -1;
+        }
+
+
+        /* ==============================
+           MENU
+        ============================== */
+
+        header {
+
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+
+            padding: 25px 6%;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            z-index: 10;
+        }
+
+
+        .logo {
+
+            font-size: 28px;
+
+            font-weight: 900;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+        }
+
+
+        .logo span {
+            color: #00aaff;
+        }
+
+
+        nav {
+
+            display: flex;
+
+            gap: 35px;
+        }
+
+
+        nav a {
+
+            color: #aaa;
+
+            text-decoration: none;
+
+            font-size: 13px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+
+            transition: 0.3s;
+        }
+
+
+        nav a:hover {
+            color: white;
+        }
+
+
+        .menu-btn {
+
+            border: 1px solid #00aaff;
+
+            color: #00aaff;
+
+            padding: 12px 20px;
+
+            text-decoration: none;
+
+            font-size: 13px;
+
+            text-transform: uppercase;
+
+            transition: 0.3s;
+        }
+
+
+        .menu-btn:hover {
+
+            background: #00aaff;
+
+            color: black;
+        }
+
+
+        /* ==============================
+           HERO
+        ============================== */
+
+        .hero {
+
+            min-height: 100vh;
+
+            display: flex;
+
+            align-items: center;
+
+            padding: 120px 10% 50px;
+
+            position: relative;
+
+            background:
+
+                linear-gradient(
+                    90deg,
+                    rgba(7,9,13,0.95),
+                    rgba(7,9,13,0.30)
+                ),
+
+                url("https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1800&q=80");
+
+            background-size: cover;
+
+            background-position: center;
+        }
+
+
+        .hero-content {
+
+            max-width: 650px;
+
+            z-index: 2;
+        }
+
+
+        .status {
+
+            color: #00ff88;
+
+            font-size: 13px;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 20px;
+
+            text-transform: uppercase;
+        }
+
+
+        .hero h1 {
+
+            font-size: clamp(55px, 10vw, 130px);
+
+            line-height: 0.85;
+
+            font-weight: 900;
+
+            letter-spacing: -4px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 30px;
+        }
+
+
+        .hero h1 span {
+
+            color: transparent;
+
+            -webkit-text-stroke: 2px #00aaff;
+        }
+
+
+        .hero p {
+
+            color: #aaa;
+
+            line-height: 1.8;
+
+            max-width: 500px;
+
+            margin-bottom: 35px;
+        }
+
+
+        .play-btn {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+            padding: 18px 35px;
+
+            background: #00aaff;
+
+            color: black;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            text-transform: uppercase;
+
+            transition: 0.3s;
+        }
+
+
+        .play-btn:hover {
+
+            box-shadow:
+                0 0 30px
+                rgba(0,170,255,0.6);
+
+            transform: translateX(8px);
+        }
+
+
+        /* INFORMAÇÕES DO JOGO */
+
+        .game-stats {
+
+            position: absolute;
+
+            bottom: 40px;
+
+            right: 6%;
+
+            display: flex;
+
+            gap: 40px;
+        }
+
+
+        .stat {
+
+            border-left:
+                2px solid #00aaff;
+
+            padding-left: 15px;
+        }
+
+
+        .stat strong {
+
+            display: block;
+
+            font-size: 25px;
+        }
+
+
+        .stat span {
+
+            color: #777;
+
+            font-size: 11px;
+
+            text-transform: uppercase;
+        }
+
+
+        /* ==============================
+           FRASE
+        ============================== */
+
+        .quote {
+
+            padding: 120px 10%;
+
+            text-align: center;
+
+            background: #0b0e14;
+        }
+
+
+        .quote p {
+
+            max-width: 900px;
+
+            margin: auto;
+
+            font-size: clamp(28px, 5vw, 60px);
+
+            font-weight: bold;
+
+            line-height: 1.2;
+
+            text-transform: uppercase;
+        }
+
+
+        .quote span {
+            color: #00aaff;
+        }
+
+
+        /* ==============================
+           PERSONAGENS
+        ============================== */
+
+        .characters {
+
+            padding: 100px 6%;
+
+            background: #07090d;
+        }
+
+
+        .section-title {
+
+            margin-bottom: 50px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: end;
+        }
+
+
+        .section-title h2 {
+
+            font-size: 50px;
+
+            text-transform: uppercase;
+        }
+
+
+        .section-title p {
+
+            color: #777;
+
+            max-width: 300px;
+
+            text-align: right;
+        }
+
+
+        .character-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+
+        .character {
+
+            height: 500px;
+
+            position: relative;
+
+            overflow: hidden;
+
+            border: 1px solid #1d2633;
+
+            background: #111;
+        }
+
+
+        .character img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            filter: grayscale(100%);
+
+            transition: 0.5s;
+        }
+
+
+        .character:hover img {
+
+            filter: grayscale(0%);
+
+            transform: scale(1.08);
+        }
+
+
+        .character-info {
+
+            position: absolute;
+
+            bottom: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            padding: 25px;
+
+            background:
+
+                linear-gradient(
+                    transparent,
+                    rgba(0,0,0,0.95)
+                );
+        }
+
+
+        .character-info h3 {
+
+            font-size: 30px;
+
+            text-transform: uppercase;
+        }
+
+
+        .character-info span {
+
+            color: #00aaff;
+
+            font-size: 12px;
+
+            letter-spacing: 2px;
+        }
+
+
+        /* ==============================
+           MAPA
+        ============================== */
+
+        .world {
+
+            min-height: 700px;
+
+            padding: 100px 10%;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            background:
+
+                linear-gradient(
+                    rgba(0,0,0,0.55),
+                    rgba(0,0,0,0.8)
+                ),
+
+                url("https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=1800&q=80");
+
+            background-size: cover;
+
+            background-position: center;
+        }
+
+
+        .world small {
+
+            color: #00aaff;
+
+            letter-spacing: 3px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .world h2 {
+
+            font-size: clamp(50px, 8vw, 100px);
+
+            text-transform: uppercase;
+
+            max-width: 700px;
+
+            margin-bottom: 25px;
+        }
+
+
+        .world p {
+
+            color: #ccc;
+
+            max-width: 500px;
+
+            line-height: 1.8;
+        }
+
+
+        /* ==============================
+           RANKING
+        ============================== */
+
+        .ranking {
+
+            padding: 100px 10%;
+
+            background: #0b0e14;
+        }
+
+
+        .ranking-list {
+
+            max-width: 900px;
+
+            margin: auto;
+        }
+
+
+        .player {
+
+            display: grid;
+
+            grid-template-columns:
+                80px 1fr auto;
+
+            align-items: center;
+
+            padding: 22px;
+
+            border-bottom:
+                1px solid #1d2633;
+
+            transition: 0.3s;
+        }
+
+
+        .player:hover {
+
+            background: #111722;
+
+            padding-left: 35px;
+        }
+
+
+        .position {
+
+            font-size: 28px;
+
+            font-weight: bold;
+
+            color: #00aaff;
+        }
+
+
+        .player-name {
+
+            font-size: 20px;
+
+            font-weight: bold;
+        }
+
+
+        .player-name span {
+
+            display: block;
+
+            color: #777;
+
+            font-size: 12px;
+
+            margin-top: 5px;
+        }
+
+
+        .score {
+
+            color: #00ff88;
+
+            font-weight: bold;
+        }
+
+
+        /* ==============================
+           DOWNLOAD
+        ============================== */
+
+        .download {
+
+            padding: 130px 10%;
+
+            text-align: center;
+
+            background:
+
+                linear-gradient(
+                    rgba(0,170,255,0.08),
+                    rgba(0,0,0,0.8)
+                );
+        }
+
+
+        .download h2 {
+
+            font-size: clamp(45px, 8vw, 100px);
+
+            text-transform: uppercase;
+
+            margin-bottom: 20px;
+        }
+
+
+        .download p {
+
+            color: #888;
+
+            margin-bottom: 35px;
+        }
+
+
+        /* ==============================
+           RODAPÉ
+        ============================== */
+
+        footer {
+
+            padding: 30px 6%;
+
+            border-top:
+                1px solid #1d2633;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            color: #666;
+
+            font-size: 12px;
+        }
+
+
+        /* ==============================
+           RESPONSIVO
+        ============================== */
+
+        @media (max-width: 900px) {
+
+            nav {
+                display: none;
+            }
+
+
+            .character-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .character {
+                height: 450px;
+            }
+
+
+            .game-stats {
+
+                position: static;
+
+                margin-top: 60px;
+
+                flex-wrap: wrap;
+            }
+
+
+            .section-title {
+
+                display: block;
+            }
+
+
+            .section-title p {
+
+                text-align: left;
+
+                margin-top: 15px;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            header {
+                padding: 20px;
+            }
+
+
+            .menu-btn {
+                display: none;
+            }
+
+
+            .hero {
+                padding: 120px 7% 60px;
+            }
+
+
+            .hero h1 {
+                letter-spacing: -2px;
+            }
+
+
+            .game-stats {
+                gap: 20px;
+            }
+
+
+            .stat strong {
+                font-size: 20px;
+            }
+
+
+            .characters,
+            .ranking,
+            .world {
+                padding: 70px 7%;
+            }
+
+
+            .section-title h2 {
+                font-size: 38px;
+            }
+
+
+            .player {
+
+                grid-template-columns:
+                    50px 1fr;
+
+                gap: 10px;
+            }
+
+
+            .score {
+
+                grid-column:
+                    2;
+            }
+
+
+            footer {
+
+                flex-direction: column;
+
+                gap: 10px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- MENU -->
+
+    <header>
+
+        <div class="logo">
+
+            Shadow <span>Strike</span>
+
+        </div>
+
+
+        <nav>
+
+            <a href="#personagens">
+                Personagens
+            </a>
+
+            <a href="#mundo">
+                Mundo
+            </a>
+
+            <a href="#ranking">
+                Ranking
+            </a>
+
+        </nav>
+
+
+        <a
+            href="#jogar"
+            class="menu-btn"
+        >
+            Jogar Agora
+        </a>
+
+    </header>
+
+
+
+    <!-- TELA INICIAL -->
+
+    <main
+        class="hero"
+        id="inicio"
+    >
+
+        <div class="hero-content">
+
+            <div class="status">
+                ● Servidores Online
+            </div>
+
+
+            <h1>
+
+                Shadow
+
+                <span>
+                    Strike
+                </span>
+
+            </h1>
+
+
+            <p>
+
+                Entre em um mundo onde apenas os mais
+                fortes sobrevivem. Escolha seu guerreiro,
+                enfrente inimigos e conquiste seu lugar
+                entre as lendas.
+
+            </p>
+
+
+            <a
+                href="#jogar"
+                class="play-btn"
+            >
+
+                ▶ JOGAR AGORA
+
+            </a>
+
+        </div>
+
+
+        <div class="game-stats">
+
+            <div class="stat">
+
+                <strong>
+                    2.4M
+                </strong>
+
+                <span>
+                    Jogadores
+                </span>
+
+            </div>
+
+
+            <div class="stat">
+
+                <strong>
+                    18
+                </strong>
+
+                <span>
+                    Mapas
+                </span>
+
+            </div>
+
+
+            <div class="stat">
+
+                <strong>
+                    36
+                </strong>
+
+                <span>
+                    Guerreiros
+                </span>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- FRASE -->
+
+    <section class="quote">
+
+        <p>
+
+            "Neste mundo, você não nasce uma lenda.
+
+            <span>
+                Você luta para se tornar uma."
+            </span>
+
+        </p>
+
+    </section>
+
+
+
+    <!-- PERSONAGENS -->
+
+    <section
+        class="characters"
+        id="personagens"
+    >
+
+        <div class="section-title">
+
+            <h2>
+                Escolha seu guerreiro
+            </h2>
+
+            <p>
+
+                Cada personagem possui habilidades
+                únicas e um estilo de combate diferente.
+
+            </p>
+
+        </div>
+
+
+        <div class="character-grid">
+
+
+            <article class="character">
+
+                <img
+                    src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=900&q=80"
+                    alt="Personagem"
+                >
+
+
+                <div class="character-info">
+
+                    <span>
+                        CLASSE: ASSASSINO
+                    </span>
+
+                    <h3>
+                        KAI
+                    </h3>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="character">
+
+                <img
+                    src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=900&q=80"
+                    alt="Personagem"
+                >
+
+
+                <div class="character-info">
+
+                    <span>
+                        CLASSE: GUERREIRO
+                    </span>
+
+                    <h3>
+                        RAVEN
+                    </h3>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="character">
+
+                <img
+                    src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=900&q=80"
+                    alt="Personagem"
+                >
+
+
+                <div class="character-info">
+
+                    <span>
+                        CLASSE: TECNOMANTE
+                    </span>
+
+                    <h3>
+                        NOVA
+                    </h3>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- MUNDO -->
+
+    <section
+        class="world"
+        id="mundo"
+    >
+
+        <small>
+            MAPA PRINCIPAL
+        </small>
+
+
+        <h2>
+            Bem-vindo ao setor zero.
+        </h2>
+
+
+        <p>
+
+            Uma região abandonada após a Grande Guerra.
+            Agora, diferentes facções lutam pelo controle
+            dos últimos recursos do planeta.
+
+        </p>
+
+    </section>
+
+
+
+    <!-- RANKING -->
+
+    <section
+        class="ranking"
+        id="ranking"
+    >
+
+        <div class="section-title">
+
+            <h2>
+                Ranking Global
+            </h2>
+
+            <p>
+                Os jogadores mais perigosos do momento.
+            </p>
+
+        </div>
+
+
+        <div class="ranking-list">
+
+
+            <div class="player">
+
+                <div class="position">
+                    #01
+                </div>
+
+                <div class="player-name">
+
+                    DarkHunter
+
+                    <span>
+                        Nível 87
+                    </span>
+
+                </div>
+
+                <div class="score">
+                    98.450 XP
+                </div>
+
+            </div>
+
+
+
+            <div class="player">
+
+                <div class="position">
+                    #02
+                </div>
+
+                <div class="player-name">
+
+                    GhostBR
+
+                    <span>
+                        Nível 84
+                    </span>
+
+                </div>
+
+                <div class="score">
+                    92.100 XP
+                </div>
+
+            </div>
+
+
+
+            <div class="player">
+
+                <div class="position">
+                    #03
+                </div>
+
+                <div class="player-name">
+
+                    ShadowX
+
+                    <span>
+                        Nível 81
+                    </span>
+
+                </div>
+
+                <div class="score">
+                    87.900 XP
+                </div>
+
+            </div>
+
+
+
+            <div class="player">
+
+                <div class="position">
+                    #04
+                </div>
+
+                <div class="player-name">
+
+                    RavenKill
+
+                    <span>
+                        Nível 79
+                    </span>
+
+                </div>
+
+                <div class="score">
+                    82.300 XP
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- DOWNLOAD -->
+
+    <section
+        class="download"
+        id="jogar"
+    >
+
+        <h2>
+            Está pronto?
+        </h2>
+
+
+        <p>
+
+            Entre na batalha e descubra se você
+            tem o que é necessário para sobreviver.
+
+        </p>
+
+
+        <a
+            href="#"
+            class="play-btn"
+        >
+
+            ▶ BAIXAR O JOGO
+
+        </a>
+
+    </section>
+
+
+
+    <!-- RODAPÉ -->
+
+    <footer>
+
+        <div>
+
+            © 2026 Shadow Strike
+
+        </div>
+
+
+        <div>
+
+            Fictional Game Project • All Rights Reserved
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
