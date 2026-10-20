@@ -1,29 +1,679 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elliot Alderson</title>
-    <link rel="stylesheet" href="estilos/style.css">
-    <link rel="stylesheet" href="biografia.html">
-</head>
-<body>
-    <header id="Home">
-        <nav>
-            <ul>
-                <div class="logo"><img src="imagens/Mr._Robot_Logo.svg.png" alt=""></div>
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="biografia.html" target="_self">Biografia</a></li>
-                <li><a href="#elliot">Elliot</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-            </ul>
-        </nav>
-        <h1>Elliot Alderson</h1>
-        <p>O mundo em si é apenas uma ilusão que criamos para não encarar a verdade.</p>
-        <div id="elliot"><img src="imagens/elliot-alderson.webp" alt=""></div>
-    </header>
-    <main>
+<title>Elliot Alderson | Mr. Robot</title>
 
-    </main>
+<style>
+
+    @charset "UTF-8";
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+
+    body {
+        background-color: black;
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+
+    /* ================= NAV ================= */
+
+    nav {
+        background-color: #1A1A1A;
+        min-height: 55px;
+        padding: 10px 40px;
+
+        display: flex;
+        align-items: center;
+    }
+
+
+    nav ul {
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        list-style-type: none;
+
+        justify-content: space-between;
+    }
+
+
+    .logo {
+        height: 30px;
+        display: flex;
+        align-items: center;
+    }
+
+
+    .logo img {
+        height: 30px;
+        width: auto;
+    }
+
+
+    nav ul li {
+        margin-left: 20px;
+    }
+
+
+    nav a {
+        text-decoration: none;
+        color: white;
+
+        padding: 15px;
+
+        transition: 0.3s;
+    }
+
+
+    nav a:hover {
+        background-color: #E50914;
+    }
+
+
+
+    /* ================= HEADER ================= */
+
+    header h1 {
+        text-align: center;
+
+        padding-top: 40px;
+        padding-bottom: 15px;
+
+        font-family: Arial, Helvetica, sans-serif;
+
+        font-size: 3em;
+        letter-spacing: 10px;
+    }
+
+
+    header p {
+        text-align: center;
+
+        color: #bdbdbd;
+
+        margin-bottom: 35px;
+
+        padding: 0px 20px;
+
+        font-size: 0.95em;
+    }
+
+
+    #elliot {
+        width: 100%;
+        max-height: 600px;
+
+        overflow: hidden;
+
+        position: relative;
+    }
+
+
+    #elliot img {
+        width: 100%;
+
+        display: block;
+
+        filter: grayscale(20%) contrast(110%);
+    }
+
+
+
+    /* ================= BIOGRAFIA ================= */
+
+    #inicio {
+        padding: 100px 10%;
+
+        background-color: #0d0d0d;
+    }
+
+
+    .titulo {
+        color: #E50914;
+
+        font-size: 2.5em;
+
+        margin-bottom: 30px;
+
+        text-transform: uppercase;
+
+        letter-spacing: 5px;
+    }
+
+
+    .biografia-container {
+        display: flex;
+
+        gap: 60px;
+
+        align-items: center;
+
+        max-width: 1200px;
+
+        margin: auto;
+    }
+
+
+    .biografia-texto {
+        flex: 1;
+    }
+
+
+    .biografia-texto p {
+        color: #bdbdbd;
+
+        line-height: 1.8;
+
+        margin-bottom: 20px;
+    }
+
+
+    .dados {
+        flex: 1;
+
+        background-color: #151515;
+
+        padding: 35px;
+
+        border-left: 5px solid #E50914;
+    }
+
+
+    .dados h3 {
+        margin-bottom: 25px;
+
+        color: #E50914;
+    }
+
+
+    .dados p {
+        margin-bottom: 15px;
+
+        color: #cccccc;
+    }
+
+
+    .dados strong {
+        color: white;
+    }
+
+
+
+    /* ================= PERFIL ================= */
+
+    #elliot-perfil {
+        padding: 100px 10%;
+
+        background-color: black;
+    }
+
+
+    .cards {
+        display: flex;
+
+        gap: 25px;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+
+    .card {
+        width: 300px;
+
+        background-color: #151515;
+
+        padding: 35px 25px;
+
+        border-bottom: 3px solid #E50914;
+
+        transition: 0.3s;
+    }
+
+
+    .card:hover {
+        transform: translateY(-10px);
+
+        background-color: #1d1d1d;
+    }
+
+
+    .card h3 {
+        color: #E50914;
+
+        margin-bottom: 20px;
+
+        font-size: 1.3em;
+    }
+
+
+    .card p {
+        color: #bdbdbd;
+
+        line-height: 1.7;
+
+        font-size: 0.9em;
+    }
+
+
+
+    /* ================= FRASE ================= */
+
+    #frase {
+        min-height: 400px;
+
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
+        text-align: center;
+
+        padding: 50px;
+
+        background-color: #E50914;
+    }
+
+
+    #frase blockquote {
+        font-size: 2.2em;
+
+        max-width: 900px;
+
+        font-weight: bold;
+
+        line-height: 1.5;
+    }
+
+
+
+    /* ================= SOBRE ================= */
+
+    #sobre {
+        padding: 100px 10%;
+
+        background-color: #111;
+    }
+
+
+    .sobre-container {
+        max-width: 900px;
+
+        margin: auto;
+
+        text-align: center;
+    }
+
+
+    .sobre-container p {
+        color: #aaa;
+
+        line-height: 1.8;
+
+        margin-top: 20px;
+    }
+
+
+
+    /* ================= FOOTER ================= */
+
+    footer {
+        background-color: #050505;
+
+        text-align: center;
+
+        padding: 35px;
+
+        color: #666;
+
+        font-size: 0.8em;
+    }
+
+
+    footer span {
+        color: #E50914;
+    }
+
+
+
+    /* ================= RESPONSIVIDADE ================= */
+
+    @media (max-width: 800px) {
+
+        nav {
+            padding: 15px;
+        }
+
+
+        nav ul {
+            flex-wrap: wrap;
+
+            justify-content: center;
+
+            gap: 10px;
+        }
+
+
+        .logo {
+            width: 100%;
+
+            justify-content: center;
+
+            margin-bottom: 10px;
+        }
+
+
+        nav ul li {
+            margin-left: 0;
+        }
+
+
+        header h1 {
+            font-size: 2em;
+
+            letter-spacing: 5px;
+        }
+
+
+        .biografia-container {
+            flex-direction: column;
+        }
+
+
+        .titulo {
+            font-size: 2em;
+        }
+
+
+        #frase blockquote {
+            font-size: 1.5em;
+        }
+
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<!-- ================= HEADER ================= -->
+
+<header id="Home">
+
+    <nav>
+
+        <ul>
+
+            <div class="logo">
+                <img src="imagens/Mr._Robot_Logo.svg.png" alt="Mr Robot">
+            </div>
+
+
+            <li>
+                <a href="#inicio">Início</a>
+            </li>
+
+
+            <li>
+                <a href="biografia.html">Biografia</a>
+            </li>
+
+
+            <li>
+                <a href="#elliot-perfil">Perfil</a>
+            </li>
+
+
+            <li>
+                <a href="#sobre">Sobre</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <h1>ELLIOT ALDERSON</h1>
+
+
+    <p>
+        O mundo em si é apenas uma ilusão que criamos
+        para não encarar a verdade.
+    </p>
+
+
+    <div id="elliot">
+
+        <img src="imagens/elliot-alderson.webp"
+            alt="Elliot Alderson">
+
+    </div>
+
+</header>
+
+
+
+<main>
+
+
+    <!-- ================= BIOGRAFIA ================= -->
+
+    <section id="inicio">
+
+        <div class="biografia-container">
+
+
+            <div class="biografia-texto">
+
+                <h2 class="titulo">
+                    Quem é Elliot?
+                </h2>
+
+
+                <p>
+                    Elliot Alderson é um especialista em
+                    segurança cibernética que trabalha durante
+                    o dia protegendo sistemas e redes.
+                </p>
+
+
+                <p>
+                    Fora do trabalho, utiliza suas habilidades
+                    para investigar pessoas e descobrir informações
+                    que normalmente permaneceriam escondidas.
+                </p>
+
+
+                <p>
+                    Sua visão sobre a sociedade, tecnologia e
+                    controle faz com que ele enxergue o mundo de
+                    uma maneira completamente diferente.
+                </p>
+
+            </div>
+
+
+
+            <div class="dados">
+
+                <h3>ARQUIVO DO PERSONAGEM</h3>
+
+                <p>
+                    <strong>Nome:</strong>
+                    Elliot Alderson
+                </p>
+
+                <p>
+                    <strong>Profissão:</strong>
+                    Engenheiro de Segurança
+                </p>
+
+                <p>
+                    <strong>Especialidade:</strong>
+                    Segurança Cibernética
+                </p>
+
+                <p>
+                    <strong>Localização:</strong>
+                    Nova York
+                </p>
+
+                <p>
+                    <strong>Status:</strong>
+                    Classificado
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= PERFIL ================= -->
+
+    <section id="elliot-perfil">
+
+        <h2 class="titulo">
+            Perfil
+        </h2>
+
+
+        <div class="cards">
+
+
+            <div class="card">
+
+                <h3>01. HACKING</h3>
+
+                <p>
+                    Elliot possui conhecimentos avançados
+                    em sistemas, redes e segurança digital.
+                </p>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <h3>02. OBSERVAÇÃO</h3>
+
+                <p>
+                    Sua capacidade de observar detalhes permite
+                    perceber informações que outras pessoas
+                    normalmente ignoram.
+                </p>
+
+            </div>
+
+
+
+            <div class="card">
+
+                <h3>03. INVESTIGAÇÃO</h3>
+
+                <p>
+                    Ele utiliza tecnologia e informações públicas
+                    para descobrir segredos escondidos.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FRASE ================= -->
+
+    <section id="frase">
+
+        <blockquote>
+
+            "Controle é uma ilusão.
+            Quanto mais você tenta controlar tudo,
+            menos controle você realmente tem."
+
+        </blockquote>
+
+    </section>
+
+
+
+    <!-- ================= SOBRE ================= -->
+
+    <section id="sobre">
+
+        <div class="sobre-container">
+
+            <h2 class="titulo">
+                Sobre o Projeto
+            </h2>
+
+
+            <p>
+                Este site é uma homenagem visual ao universo
+                de Mr. Robot e ao personagem Elliot Alderson.
+            </p>
+
+
+            <p>
+                Um projeto criado utilizando HTML e CSS,
+                explorando layouts modernos, responsividade
+                e uma identidade visual inspirada na série.
+            </p>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p>
+        Projeto desenvolvido por fã •
+        <span>MR. ROBOT</span>
+    </p>
+
+    <br>
+
+    <p>
+        © 2026 — Projeto não oficial.
+    </p>
+
+</footer>
+
 </body>
+
 </html>

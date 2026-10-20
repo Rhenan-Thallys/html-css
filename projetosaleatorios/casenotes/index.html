@@ -1,30 +1,659 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Montserrat:wght@300;400;700&display=swap"
+        rel="stylesheet">
 
-<link rel="stylesheet" href="estilos/style.css">
+    <title>Arquivos Secretos | Case Notes</title>
 
-<title>Arquivos Secretos</title>
+    <style>
+        @charset "UTF-8";
+
+        :root {
+            --fundo-principal: #e5e5e5;
+            --fundo-secundario: #111111;
+            --vermelho-principal: #B91111;
+            --vermelho-claro-hover: #E01919;
+            --branco: #FFFFFF;
+            --cinza-claro: #D0D0D0;
+            --cinza-escuro: #666666;
+
+            --titulo-principal: 'Special Elite', cursive;
+            --texto-secundario: 'Montserrat', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--fundo-secundario);
+        }
+
+
+        /* ================= HEADER ================= */
+
+        header {
+            background-image:
+                linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.35)),
+                url(../photo-1419640303358-44f0d27f48e7.avif);
+
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+
+            height: 900px;
+        }
+
+        header h1 {
+            color: var(--vermelho-principal);
+            font-family: var(--titulo-principal);
+            font-size: 6em;
+
+            padding-left: 75px;
+            padding-top: 15px;
+        }
+
+        header #p1 {
+            color: var(--branco);
+            font-family: var(--texto-secundario);
+            letter-spacing: 4px;
+            font-size: 1em;
+
+            padding-top: 120px;
+            padding-left: 74px;
+        }
+
+        header p {
+            font-size: 1.6em;
+            padding-top: 35px;
+
+            color: white;
+            padding-left: 75px;
+
+            font-family: var(--texto-secundario);
+            line-height: 30px;
+        }
+
+        hr {
+            margin-top: 12px;
+            width: 280px;
+            margin-left: 75px;
+
+            height: 3px;
+            border: none;
+
+            background: linear-gradient(to right, red, transparent);
+        }
+
+        button {
+            background-color: var(--vermelho-principal);
+
+            border: none;
+            color: white;
+
+            font-weight: bold;
+            border-radius: 4px;
+
+            height: 45px;
+            width: 180px;
+
+            margin-left: 75px;
+            margin-top: 35px;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #111111;
+            color: red;
+
+            box-shadow: 0px 0px 8px white;
+        }
+
+
+        /* ================= SEÇÃO DE CASOS ================= */
+
+        #casos {
+            background-color: #e5e5e5;
+
+            min-height: 800px;
+
+            padding: 100px 8%;
+        }
+
+        .titulo-secao {
+            text-align: center;
+
+            font-family: var(--titulo-principal);
+            font-size: 3.5em;
+
+            color: #111;
+        }
+
+        .subtitulo {
+            text-align: center;
+
+            font-family: var(--texto-secundario);
+            color: #666;
+
+            margin-top: 15px;
+            margin-bottom: 70px;
+        }
+
+
+        /* ================= CARDS ================= */
+
+        .container-casos {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+
+            flex-wrap: wrap;
+        }
+
+        .caso {
+            width: 320px;
+
+            background-color: #111;
+
+            color: white;
+
+            border-bottom: 4px solid var(--vermelho-principal);
+
+            transition: 0.3s;
+        }
+
+        .caso:hover {
+            transform: translateY(-10px);
+
+            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        .imagem-caso {
+            height: 200px;
+
+            background-size: cover;
+            background-position: center;
+
+            filter: grayscale(100%);
+        }
+
+
+        /* Imagens dos casos */
+
+        #caso1 {
+            background-image: url("https://images.unsplash.com/photo-1519074069444-1ba4fff66d16");
+        }
+
+        #caso2 {
+            background-image: url("https://images.unsplash.com/photo-1494905998402-395d579af36f");
+        }
+
+        #caso3 {
+            background-image: url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee");
+        }
+
+
+        .conteudo-caso {
+            padding: 25px;
+        }
+
+        .codigo {
+            color: var(--vermelho-principal);
+
+            font-family: var(--texto-secundario);
+            font-weight: bold;
+
+            font-size: 0.8em;
+
+            letter-spacing: 2px;
+        }
+
+        .conteudo-caso h2 {
+            font-family: var(--titulo-principal);
+
+            font-size: 1.8em;
+
+            margin-top: 15px;
+        }
+
+        .conteudo-caso p {
+            font-family: var(--texto-secundario);
+
+            color: #ccc;
+
+            font-size: 0.9em;
+
+            line-height: 24px;
+
+            margin-top: 15px;
+        }
+
+        .botao-caso {
+            display: inline-block;
+
+            color: white;
+
+            font-family: var(--texto-secundario);
+            font-weight: bold;
+
+            margin-top: 25px;
+
+            text-decoration: none;
+
+            transition: 0.3s;
+        }
+
+        .botao-caso:hover {
+            color: var(--vermelho-principal);
+        }
+
+
+        /* ================= ARQUIVOS ================= */
+
+        #arquivos {
+            background-color: #111;
+
+            color: white;
+
+            padding: 100px 8%;
+        }
+
+        .arquivo-container {
+            max-width: 900px;
+
+            margin: auto;
+        }
+
+        .arquivo {
+            border-left: 4px solid var(--vermelho-principal);
+
+            border-bottom: 1px solid #333;
+
+            padding: 25px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            transition: 0.3s;
+        }
+
+        .arquivo:hover {
+            background-color: #1b1b1b;
+        }
+
+        .arquivo h3 {
+            font-family: var(--titulo-principal);
+
+            font-size: 1.4em;
+        }
+
+        .arquivo p {
+            font-family: var(--texto-secundario);
+
+            color: #aaa;
+
+            margin-top: 8px;
+
+            font-size: 0.9em;
+        }
+
+        .status {
+            color: var(--vermelho-principal);
+
+            font-family: var(--texto-secundario);
+
+            font-weight: bold;
+
+            font-size: 0.8em;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background-color: #080808;
+
+            color: #777;
+
+            text-align: center;
+
+            padding: 30px;
+
+            font-family: var(--texto-secundario);
+
+            font-size: 0.8em;
+        }
+
+        footer span {
+            color: var(--vermelho-principal);
+        }
+
+
+        /* ================= RESPONSIVIDADE ================= */
+
+        @media (max-width: 700px) {
+
+            header {
+                height: 750px;
+
+                background-attachment: scroll;
+            }
+
+            header #p1 {
+                padding-left: 30px;
+
+                padding-top: 100px;
+
+                font-size: 0.8em;
+            }
+
+            header h1 {
+                font-size: 3.5em;
+
+                padding-left: 30px;
+            }
+
+            header p {
+                padding-left: 30px;
+
+                font-size: 1.1em;
+            }
+
+            hr {
+                margin-left: 30px;
+            }
+
+            button {
+                margin-left: 30px;
+            }
+
+            .titulo-secao {
+                font-size: 2.5em;
+            }
+
+            .arquivo {
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                gap: 15px;
+            }
+
+        }
+    </style>
 
 </head>
 
+
 <body>
+
+
+    <!-- ================= HEADER ================= -->
+
     <header>
 
-            <p id="p1">ARQUIVOS CONFIDENCIAIS</p>
-            <h1>CASE NOTES</h1>
-            <div id="linha">
-                <hr>
+        <p id="p1">ARQUIVOS CONFIDENCIAIS</p>
+
+        <h1>CASE NOTES</h1>
+
+        <div id="linha">
+            <hr>
+        </div>
+
+        <p>
+            Mistérios reais. Casos sem solução.
+            <br>
+
+            Documentos secretos e histórias que
+            <br>
+
+            parecem ficção.
+
+            <span style="color: red;">
+                Você está pronto para
+                <br>
+                descobrir a verdade?
+            </span>
+        </p>
+
+
+        <a href="#casos">
+            <button>EXPLORAR CASOS</button>
+        </a>
+
+    </header>
+
+
+
+    <!-- ================= CASOS ================= -->
+
+    <main>
+
+        <section id="casos">
+
+            <h2 class="titulo-secao">CASOS EM DESTAQUE</h2>
+
+            <p class="subtitulo">
+                Alguns arquivos nunca deveriam ter sido encontrados.
+            </p>
+
+
+            <div class="container-casos">
+
+
+                <!-- CASO 1 -->
+
+                <article class="caso">
+
+                    <div class="imagem-caso" id="caso1"></div>
+
+                    <div class="conteudo-caso">
+
+                        <span class="codigo">
+                            ARQUIVO #001
+                        </span>
+
+                        <h2>O Desaparecimento</h2>
+
+                        <p>
+                            Uma pessoa desaparece sem deixar rastros.
+                            Nenhuma câmera registrou sua saída.
+                            Nenhuma testemunha viu o que aconteceu.
+                        </p>
+
+                        <a href="#" class="botao-caso">
+                            ABRIR ARQUIVO →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- CASO 2 -->
+
+                <article class="caso">
+
+                    <div class="imagem-caso" id="caso2"></div>
+
+                    <div class="conteudo-caso">
+
+                        <span class="codigo">
+                            ARQUIVO #002
+                        </span>
+
+                        <h2>A Estrada Sem Fim</h2>
+
+                        <p>
+                            Motoristas relatam dirigir por horas
+                            em uma estrada que aparentemente
+                            não aparece em nenhum mapa.
+                        </p>
+
+                        <a href="#" class="botao-caso">
+                            ABRIR ARQUIVO →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- CASO 3 -->
+
+                <article class="caso">
+
+                    <div class="imagem-caso" id="caso3"></div>
+
+                    <div class="conteudo-caso">
+
+                        <span class="codigo">
+                            ARQUIVO #003
+                        </span>
+
+                        <h2>O Último Registro</h2>
+
+                        <p>
+                            Uma gravação encontrada anos depois
+                            contém uma voz desconhecida dizendo
+                            algo que ninguém conseguiu explicar.
+                        </p>
+
+                        <a href="#" class="botao-caso">
+                            ABRIR ARQUIVO →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
             </div>
 
-        <p>Mistérios reais. Casos sem solução. <br> Documentos secretos e histórias que <br> parecem ficção. <span style="color: red;">Você está pronto para <br> descobrir a verdade?</span></p>
+        </section>
 
-        <button>EXPLORAR CASOS</button>
-    </header>
+
+
+        <!-- ================= ARQUIVOS ================= -->
+
+        <section id="arquivos">
+
+            <h2 class="titulo-secao" style="color: white;">
+                ARQUIVOS RECENTES
+            </h2>
+
+            <p class="subtitulo">
+                Documentos classificados encontrados recentemente.
+            </p>
+
+
+            <div class="arquivo-container">
+
+
+                <div class="arquivo">
+
+                    <div>
+
+                        <h3>PROJETO ECLIPSE</h3>
+
+                        <p>
+                            Relatórios encontrados em uma instalação abandonada.
+                        </p>
+
+                    </div>
+
+                    <span class="status">
+                        CONFIDENCIAL
+                    </span>
+
+                </div>
+
+
+
+                <div class="arquivo">
+
+                    <div>
+
+                        <h3>CASO 1978</h3>
+
+                        <p>
+                            Fotografias misteriosas descobertas décadas depois.
+                        </p>
+
+                    </div>
+
+                    <span class="status">
+                        INVESTIGAÇÃO
+                    </span>
+
+                </div>
+
+
+
+                <div class="arquivo">
+
+                    <div>
+
+                        <h3>GRAVAÇÃO DESCONHECIDA</h3>
+
+                        <p>
+                            Um áudio sem origem identificada.
+                        </p>
+
+                    </div>
+
+                    <span class="status">
+                        RESTRITO
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            <span>CASE NOTES</span> © 2026
+        </p>
+
+        <br>
+
+        <p>
+            Alguns segredos deveriam permanecer escondidos.
+        </p>
+
+    </footer>
+
+
 </body>
 
 </html>
